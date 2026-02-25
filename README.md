@@ -1,1 +1,1 @@
-# compumusicology
+# Compumusicology
