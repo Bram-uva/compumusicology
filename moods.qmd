@@ -1,0 +1,23 @@
+---
+title: "The Weeknd"
+format:
+  html:
+    page-layout: full
+    toc: false
+---
+
+## Visuals
+
+::: {.columns}
+::: {.column width="50%"}
+### Mood shift (Valence vs Energy)
+
+![](img/The_Weeknd_EV.png){.plot-equal}
+:::
+
+::: {.column width="50%"}
+### Audio fingerprint
+
+![](img/The_Weeknd_Audio_Fingerprint.png){.plot-equal}
+:::
+:::

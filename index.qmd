@@ -1,0 +1,14 @@
+---
+title: "Home"
+format:
+  html:
+    page-layout: full
+---
+# Computational Musicology 2026
+
+::: {.callout-note}
+## Project
+I analyze how The Weeknd’s sound evolved over time using Spotify audio features, focusing on **valence** and **energy**.
+:::
+
+Go to **The Weeknd** in the navigation bar to see the visualizations.
