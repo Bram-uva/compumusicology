@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 README COMPUTATIONAL MUSICOLOGY
 
 # Week 9 – Structure Analysis
@@ -14,3 +15,6 @@ Distance: Cosine
 The chroma-based self-similarity matrix (Euclidean normalisation, cosine distance) shows several repeating blocks along the diagonal. These blocks indicate sections where the harmonic content remains similar over time.
 
 There are also visible off-diagonal similarities, which suggest that certain sections return later in the track. This likely corresponds to the repetition of verses and choruses. When listening to the song, the harmony remains relatively stable and repetitive, and this is reflected clearly in the matrix.
+=======
+# compumusicology
+>>>>>>> 135fd561bee07dc509cb19c5b01852f2b752b490

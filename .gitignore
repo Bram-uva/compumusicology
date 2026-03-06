@@ -18,9 +18,12 @@
 # Output files from R CMD check
 /*.Rcheck/
 
+<<<<<<< HEAD
 # CSV files
 *.csv
 
+=======
+>>>>>>> 135fd561bee07dc509cb19c5b01852f2b752b490
 # RStudio files
 .Rproj.user/
 
@@ -50,6 +53,9 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+<<<<<<< HEAD
 
 /.quarto/
 **/*.quarto_ipynb
+=======
+>>>>>>> 135fd561bee07dc509cb19c5b01852f2b752b490
