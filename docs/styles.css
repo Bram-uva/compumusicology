@@ -1,0 +1,155 @@
+:root{
+  --crimson:#dc143c;
+  --bg:#000;
+  --panel:#0b0b0b;
+  --text:#f2f2f2;
+  --muted:#b9b9b9;
+}
+
+/* =======================================================
+PAGE BASE
+======================================================= */
+
+body, .page-columns, .content{
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5{
+  color: var(--crimson) !important;
+}
+
+/* Links */
+a, a:visited{
+  color: var(--crimson) !important;
+}
+a:hover{
+  opacity:.85;
+}
+
+/* =======================================================
+TOP INFO BAR
+======================================================= */
+
+.topbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 10px 18px;
+  background: var(--bg);
+  color: var(--text);
+  font-weight: 600;
+  letter-spacing: .3px;
+  border-bottom: 2px solid var(--crimson);
+}
+
+/* reserve space for fixed bar */
+body{
+  padding-top: 44px;
+}
+
+/* =======================================================
+QUARTO NAVBAR (SECOND BAR)
+======================================================= */
+
+header#quarto-header{
+  position: sticky;
+  top: 44px;
+  z-index: 9998;
+  background: var(--crimson);
+  border-bottom: 2px solid #000;
+}
+
+header#quarto-header .navbar{
+  padding: 10px 18px !important;
+  margin: 0 !important;
+  background: var(--bg) !important;
+  border: 0 !important;
+}
+
+/* hide default site title */
+header#quarto-header .navbar-brand{
+  display: none !important;
+}
+
+/* nav links */
+header#quarto-header .navbar-nav .nav-link{
+  color: var(--crimson) !important;
+  font-weight: 600;
+  padding: 6px 10px !important;
+  border-radius: 6px;
+}
+
+/* hover effect */
+header#quarto-header .navbar-nav .nav-link:hover{
+  background: rgba(220,20,60,.12);
+}
+
+/* active page */
+header#quarto-header .navbar-nav .nav-link.active{
+  color: var(--text) !important;
+  text-decoration: none;
+}
+
+/* remove bootstrap artifacts */
+header#quarto-header .navbar-nav{
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* =======================================================
+CARDS / CALLOUTS
+======================================================= */
+
+.card, .quarto-dashboard .card, .callout{
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border: 1px solid rgba(220,20,60,.35) !important;
+  box-shadow: 0 0 0 1px rgba(220,20,60,.10);
+}
+
+.card .card-title{
+  color: var(--crimson) !important;
+}
+
+/* =======================================================
+FIGURES
+======================================================= */
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+figure{
+  padding: 12px;
+  background: #0b0b0b;
+  border: 1px solid rgba(220,20,60,.25);
+  border-radius: 12px;
+}
+
+.figure-caption, figcaption{
+  color: var(--muted) !important;
+}
+
+/* =======================================================
+PLOT LAYOUT
+======================================================= */
+
+.columns{
+  column-gap: 28px;
+}
+
+.plot-equal{
+  width: 92%;
+  height: 320px;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
