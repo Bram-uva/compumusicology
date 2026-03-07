@@ -22,7 +22,7 @@ Two visual comparisons of mood and sonic identity across The Weeknd’s early an
 This scatterplot compares valence and energy across tracks from the two corpora.  
 It helps show whether the later trilogy moves toward a brighter, darker, calmer, or more intense emotional profile.
 
-![](img/weeknd_plot1_mood_map_single.svg){.plot-equal}
+![](img/weeknd_plot1_mood_map_single.png){.plot-equal}
 :::
 :::
 
@@ -33,7 +33,7 @@ It helps show whether the later trilogy moves toward a brighter, darker, calmer,
 This heatmap summarizes highlighted tracks using standardized audio features.  
 It shows which songs stand out as more danceable, more acoustic, louder, or more emotionally bright relative to the full corpus.
 
-![](img/weeknd_plot3_fingerprint_heatmap.svg){.plot-equal}
+![](img/weeknd_plot3_fingerprint_heatmap.png){.plot-equal}
 :::
 :::
 
