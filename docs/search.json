@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Home",
-    "section": "",
-    "text": "Computational Musicology 2026\n\n\n\n\n\n\nNoteProject\n\n\n\nI analyze how The Weeknd’s sound evolved over time using Spotify audio features, focusing on valence and energy.\n\n\nGo to Moods in the navigation bar to see the visualizations."
-  },
-  {
     "objectID": "moods.html",
     "href": "moods.html",
     "title": "The Weeknd",
@@ -19,5 +12,12 @@
     "title": "The Weeknd",
     "section": "",
     "text": "Hier kun je je uitleg kwijt over hoe de valence en energy veranderen over albums of tracks.\nAls deze tekst langer wordt, krijg je binnen dit vak gewoon een scrollbar.\n\nNog extra interpretatie onder de figuur kan ook hier staan.\n\n\n\n\nHier kun je de uitleg van de audio fingerprint zetten.\nBijvoorbeeld welke nummers opvallen, wat de z-scores betekenen, en hoe je de verschillen leest.\n\nOok hier kun je extra tekst toevoegen zonder dat de hele pagina uit verhouding raakt."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "Trilogy vs Trilogy\n\n\n\n\n\n\nNoteProject\n\n\n\nIn this project, I explore how The Weeknd’s music has evolved over time. As a corpus, I compare his first three mixtapes—later compiled as Trilogy—with his latest three albums: After Hours, Dawn FM, and Hurry Up Tomorrow.\nThe Weeknd himself has suggested that these recent projects form a new trilogy. Shortly after the release of Dawn FM in 2022, he tweeted: “I wonder… did you know you’re experiencing a new trilogy?”. In interviews, he has also spoken about wanting to close the chapter of his artistic persona “The Weeknd”, describing the process as a kind of transformation.\nBecause of these themes, the albums are often interpreted as a more conceptual or spiritual trilogy. Comparing The Weeknd’s first trilogy with his most recent one therefore offers an interesting way to examine how his voice, themes, and emotional tone have evolved over time.\n\n\nGo to Moods in the navigation bar to see the visualizations."
   }
 ]
