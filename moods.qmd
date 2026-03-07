@@ -1,10 +1,5 @@
 ---
 title: "Moods"
-format:
-  html:
-    page-layout: full
-    toc: false
-    include-in-header: header.html
 ---
 
 <div class="page-subtitle">
@@ -19,10 +14,18 @@ Two visual comparisons of mood and sonic identity across The Weeknd’s early an
 ::: {.scroll-panel}
 ### Mood shift
 
-This scatterplot compares valence and energy across tracks from the two corpora.  
-It helps show whether the later trilogy moves toward a brighter, darker, calmer, or more intense emotional profile.
+This scatterplot compares valence and energy across tracks from the two corpora.
 
 ![](img/weeknd_plot1_mood_map_single.png){.plot-equal}
+
+<button class="expand-btn" onclick="toggleFullscreen(this)" aria-label="Open fullscreen">
+  <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M8 3H3v5"></path>
+    <path d="M16 3h5v5"></path>
+    <path d="M21 16v5h-5"></path>
+    <path d="M3 16v5h5"></path>
+  </svg>
+</button>
 :::
 :::
 
@@ -30,11 +33,32 @@ It helps show whether the later trilogy moves toward a brighter, darker, calmer,
 ::: {.scroll-panel}
 ### Audio fingerprint
 
-This heatmap summarizes highlighted tracks using standardized audio features.  
-It shows which songs stand out as more danceable, more acoustic, louder, or more emotionally bright relative to the full corpus.
+This heatmap summarizes highlighted tracks using standardized audio features.
 
 ![](img/weeknd_plot3_fingerprint_heatmap.png){.plot-equal}
+
+<button class="expand-btn" onclick="toggleFullscreen(this)" aria-label="Open fullscreen">
+  <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M8 3H3v5"></path>
+    <path d="M16 3h5v5"></path>
+    <path d="M21 16v5h-5"></path>
+    <path d="M3 16v5h5"></path>
+  </svg>
+</button>
 :::
 :::
+
+<script>
+function toggleFullscreen(btn) {
+  const panel = btn.closest('.scroll-panel');
+  if (!document.fullscreenElement) {
+    panel.requestFullscreen().catch(err => {
+      console.error("Fullscreen failed:", err);
+    });
+  } else {
+    document.exitFullscreen();
+  }
+}
+</script>
 
 ::::

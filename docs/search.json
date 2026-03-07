@@ -4,7 +4,7 @@
     "href": "moods.html",
     "title": "Moods",
     "section": "",
-    "text": "Two visual comparisons of mood and sonic identity across The Weeknd’s early and recent trilogy eras.\n\n\n\n\n\n\n\nMood shift\nThis scatterplot compares valence and energy across tracks from the two corpora.\nIt helps show whether the later trilogy moves toward a brighter, darker, calmer, or more intense emotional profile.\n\n\n\n\nAudio fingerprint\nThis heatmap summarizes highlighted tracks using standardized audio features.\nIt shows which songs stand out as more danceable, more acoustic, louder, or more emotionally bright relative to the full corpus."
+    "text": "Two visual comparisons of mood and sonic identity across The Weeknd’s early and recent trilogy eras.\n\n\n\n\n\n\n\nMood shift\nThis scatterplot compares valence and energy across tracks from the two corpora.\n\n\n\n   \n\n\n\n\n\nAudio fingerprint\nThis heatmap summarizes highlighted tracks using standardized audio features."
   },
   {
     "objectID": "index.html",

@@ -10,3 +10,49 @@
     </nav>
   </div>
 </div>
+
+<div class="panel-overlay" id="panelOverlay" onclick="closeExpandedPanel()"></div>
+
+<script>
+let activeExpandedPanel = null;
+
+function toggleExpand(button){
+  const panel = button.closest(".scroll-panel");
+  const overlay = document.getElementById("panelOverlay");
+
+  if (panel.classList.contains("expanded")) {
+    panel.classList.remove("expanded");
+    overlay.classList.remove("active");
+    document.body.classList.remove("modal-open");
+    activeExpandedPanel = null;
+    return;
+  }
+
+  if (activeExpandedPanel) {
+    activeExpandedPanel.classList.remove("expanded");
+  }
+
+  panel.classList.add("expanded");
+  overlay.classList.add("active");
+  document.body.classList.add("modal-open");
+  activeExpandedPanel = panel;
+}
+
+function closeExpandedPanel(){
+  const overlay = document.getElementById("panelOverlay");
+
+  if (activeExpandedPanel) {
+    activeExpandedPanel.classList.remove("expanded");
+    activeExpandedPanel = null;
+  }
+
+  overlay.classList.remove("active");
+  document.body.classList.remove("modal-open");
+}
+
+document.addEventListener("keydown", function(e){
+  if (e.key === "Escape") {
+    closeExpandedPanel();
+  }
+});
+</script>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Moods</title>
+<title>Moods – Computational Musicology | Bram Ruben Schoen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,6 +24,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -35,7 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0774fc528949661fb60d8774007a227f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-c72ff888e19c609265736fd5c18e5ae4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -51,39 +52,46 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-</head><body class="quarto-light"><div class="topbar">
-
-  <div class="topbar-inner">
-
-    <div class="topbar-title">
-
-      Computational Musicology | Bram Ruben Schoen
-
-    </div>
-
-
-
-    <nav class="topbar-nav">
-
-      <a href="index.html">Home</a>
-
-      <a href="moods.html">Moods</a>
-
-    </nav>
-
-  </div>
-
-</div>
 
 
 <link rel="stylesheet" href="styles.css">
+</head>
 
-
-
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Computational Musicology | Bram Ruben Schoen</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./moods.html" aria-current="page"> 
+<span class="menu-text">Moods</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
@@ -119,18 +127,37 @@ ul.task-list li input[type="checkbox"] {
 <div class="column" style="width:50%;">
 <section id="mood-shift" class="level3 scroll-panel">
 <h3 class="anchored" data-anchor-id="mood-shift">Mood shift</h3>
-<p>This scatterplot compares valence and energy across tracks from the two corpora.<br>
-It helps show whether the later trilogy moves toward a brighter, darker, calmer, or more intense emotional profile.</p>
+<p>This scatterplot compares valence and energy across tracks from the two corpora.</p>
 <p><img src="img/weeknd_plot1_mood_map_single.png" class="plot-equal img-fluid"></p>
+<button class="expand-btn" onclick="toggleFullscreen(this)" aria-label="Open fullscreen">
+<svg class="expand-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<path d="M8 3H3v5"></path> <path d="M16 3h5v5"></path> <path d="M21 16v5h-5"></path> <path d="M3 16v5h5"></path>
+</svg>
+</button>
 </section>
 </div><div class="column" style="width:50%;">
 <section id="audio-fingerprint" class="level3 scroll-panel">
 <h3 class="anchored" data-anchor-id="audio-fingerprint">Audio fingerprint</h3>
-<p>This heatmap summarizes highlighted tracks using standardized audio features.<br>
-It shows which songs stand out as more danceable, more acoustic, louder, or more emotionally bright relative to the full corpus.</p>
+<p>This heatmap summarizes highlighted tracks using standardized audio features.</p>
 <p><img src="img/weeknd_plot3_fingerprint_heatmap.png" class="plot-equal img-fluid"></p>
+<button class="expand-btn" onclick="toggleFullscreen(this)" aria-label="Open fullscreen">
+<svg class="expand-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<path d="M8 3H3v5"></path> <path d="M16 3h5v5"></path> <path d="M21 16v5h-5"></path> <path d="M3 16v5h5"></path>
+</svg>
+</button>
 </section>
-</div>
+</div><script>
+function toggleFullscreen(btn) {
+  const panel = btn.closest('.scroll-panel');
+  if (!document.fullscreenElement) {
+    panel.requestFullscreen().catch(err => {
+      console.error("Fullscreen failed:", err);
+    });
+  } else {
+    document.exitFullscreen();
+  }
+}
+</script>
 </div>
 
 

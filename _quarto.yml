@@ -3,12 +3,19 @@ project:
   output-dir: docs
 
 website:
-  title: ""
+  title: "Computational Musicology | Bram Ruben Schoen"
   search: false
+  navbar:
+    background: dark
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Moods"
+        href: moods.qmd
 
 format:
   html:
     theme: darkly
     css: styles.css
     toc: false
-    include-in-header: header.html
+    page-layout: full
