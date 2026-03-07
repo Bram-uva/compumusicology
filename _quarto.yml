@@ -1,17 +1,10 @@
 project:
   type: website
   output-dir: docs
-  
+
 website:
   title: ""
   search: false
-  navbar:
-    background: dark
-    left:
-      - href: index.qmd
-        text: Home
-      - href: moods.qmd
-        text: Music Moods
 
 format:
   html:

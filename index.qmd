@@ -4,11 +4,17 @@ format:
   html:
     page-layout: full
 ---
-# Computational Musicology 2026
+
+# Trilogy vs Trilogy
 
 ::: {.callout-note}
 ## Project
-I analyze how The Weeknd’s sound evolved over time using Spotify audio features, focusing on **valence** and **energy**.
+
+In this project, I explore how The Weeknd's music has evolved over time. As a corpus, I compare his first three mixtapes—later compiled as *Trilogy*—with his latest three albums: *After Hours*, *Dawn FM*, and *Hurry Up Tomorrow*.
+
+The Weeknd himself has suggested that these recent projects form a new trilogy. Shortly after the release of *Dawn FM* in 2022, he tweeted: “I wonder… did you know you're experiencing a new trilogy?”. In interviews, he has also spoken about wanting to close the chapter of his artistic persona “The Weeknd”, describing the process as a kind of transformation.
+
+Because of these themes, the albums are often interpreted as a more conceptual or spiritual trilogy. Comparing The Weeknd’s first trilogy with his most recent one therefore offers an interesting way to examine how his voice, themes, and emotional tone have evolved over time.
 :::
 
-Go to **The Weeknd** in the navigation bar to see the visualizations.
+Go to **Moods** in the navigation bar to see the visualizations.

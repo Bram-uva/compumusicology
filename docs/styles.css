@@ -1,35 +1,49 @@
 :root{
   --crimson:#dc143c;
-  --bg:#000;
+  --bg:#000000;
   --panel:#0b0b0b;
   --text:#f2f2f2;
   --muted:#b9b9b9;
+  --border:rgba(220,20,60,.35);
 }
 
 /* =======================================================
 PAGE BASE
 ======================================================= */
 
-body, .page-columns, .content{
+html, body{
+  background: var(--bg) !important;
+  color: var(--text) !important;
+  margin: 0;
+  padding: 0;
+}
+
+body, .content, main, .page-columns, .page-full{
   background: var(--bg) !important;
   color: var(--text) !important;
 }
 
+/* ruimte voor vaste header */
+body{
+  padding-top: 72px;
+}
+
 /* Headings */
-h1,h2,h3,h4,h5{
+h1, h2, h3, h4, h5, h6{
   color: var(--crimson) !important;
 }
 
 /* Links */
 a, a:visited{
-  color: var(--crimson) !important;
+  color: var(--crimson);
+  text-decoration: none;
 }
 a:hover{
-  opacity:.85;
+  opacity: .85;
 }
 
 /* =======================================================
-TOP INFO BAR
+CUSTOM TOPBAR
 ======================================================= */
 
 .topbar{
@@ -38,81 +52,131 @@ TOP INFO BAR
   left: 0;
   right: 0;
   z-index: 9999;
-  padding: 10px 18px;
   background: var(--bg);
-  color: var(--text);
-  font-weight: 600;
-  letter-spacing: .3px;
   border-bottom: 2px solid var(--crimson);
 }
 
-/* reserve space for fixed bar */
-body{
-  padding-top: 44px;
+.topbar-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  gap: 20px;
 }
 
-/* =======================================================
-QUARTO NAVBAR (SECOND BAR)
-======================================================= */
-
-header#quarto-header{
-  position: sticky;
-  top: 44px;
-  z-index: 9998;
-  background: var(--crimson);
-  border-bottom: 2px solid #000;
+.topbar-title{
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: .3px;
 }
 
-header#quarto-header .navbar{
-  padding: 10px 18px !important;
-  margin: 0 !important;
-  background: var(--bg) !important;
-  border: 0 !important;
+.topbar-nav{
+  display: flex;
+  gap: 18px;
 }
 
-/* hide default site title */
-header#quarto-header .navbar-brand{
-  display: none !important;
-}
-
-/* nav links */
-header#quarto-header .navbar-nav .nav-link{
+.topbar-nav a{
   color: var(--crimson) !important;
-  font-weight: 600;
-  padding: 6px 10px !important;
+  font-weight: 700;
+  padding: 6px 10px;
   border-radius: 6px;
 }
 
-/* hover effect */
-header#quarto-header .navbar-nav .nav-link:hover{
+.topbar-nav a:hover{
   background: rgba(220,20,60,.12);
 }
 
-/* active page */
-header#quarto-header .navbar-nav .nav-link.active{
-  color: var(--text) !important;
-  text-decoration: none;
-}
+/* =======================================================
+HIDE DEFAULT QUARTO HEADER/NAVBAR
+======================================================= */
 
-/* remove bootstrap artifacts */
-header#quarto-header .navbar-nav{
-  border: 0 !important;
-  box-shadow: none !important;
+header#quarto-header{
+  display: none !important;
 }
 
 /* =======================================================
-CARDS / CALLOUTS
+MAIN CONTENT WIDTH
 ======================================================= */
 
-.card, .quarto-dashboard .card, .callout{
-  background: var(--panel) !important;
-  color: var(--text) !important;
-  border: 1px solid rgba(220,20,60,.35) !important;
-  box-shadow: 0 0 0 1px rgba(220,20,60,.10);
+main.content,
+.quarto-container,
+.page-layout-full .content,
+#quarto-content{
+  max-width: 100% !important;
+  width: 100% !important;
 }
 
-.card .card-title{
-  color: var(--crimson) !important;
+/* iets meer ruimte links/rechts */
+#quarto-content main{
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+/* =======================================================
+2-COLUMN LAYOUT
+======================================================= */
+
+.columns{
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.columns > .column{
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* mobiel */
+@media (max-width: 900px){
+  .columns{
+    flex-wrap: wrap;
+  }
+
+  .columns > .column{
+    width: 100%;
+    flex-basis: 100%;
+  }
+}
+
+/* =======================================================
+SCROLLABLE PANELS
+======================================================= */
+
+.scroll-panel{
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 0 0 1px rgba(220,20,60,.10);
+  height: 78vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+/* scrollbar styling */
+.scroll-panel::-webkit-scrollbar{
+  width: 10px;
+}
+.scroll-panel::-webkit-scrollbar-track{
+  background: #111;
+  border-radius: 10px;
+}
+.scroll-panel::-webkit-scrollbar-thumb{
+  background: rgba(220,20,60,.55);
+  border-radius: 10px;
+}
+
+/* =======================================================
+TEXT BLOCKS / CALLOUTS
+======================================================= */
+
+.callout{
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
 }
 
 /* =======================================================
@@ -123,7 +187,7 @@ img{
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 0 auto;
+  margin: 14px auto;
   border-radius: 10px;
 }
 
@@ -134,22 +198,21 @@ figure{
   border-radius: 12px;
 }
 
-.figure-caption, figcaption{
+.figure-caption,
+figcaption{
   color: var(--muted) !important;
 }
 
-/* =======================================================
-PLOT LAYOUT
-======================================================= */
-
-.columns{
-  column-gap: 28px;
+/* afbeelding iets netter in panel */
+.plot-equal{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
-.plot-equal{
-  width: 92%;
-  height: 320px;
-  object-fit: contain;
-  margin: 0 auto;
-  display: block;
+/* paragrafen fijner leesbaar */
+p, li{
+  line-height: 1.6;
 }
