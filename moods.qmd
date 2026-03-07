@@ -1,25 +1,28 @@
 ---
-title: "The Weeknd"
+title: "Moods"
 format:
   html:
     page-layout: full
     toc: false
+    include-in-header: header.html
 ---
 
-## Visuals
+<div class="page-subtitle">
+Two visual comparisons of mood and sonic identity across The Weeknd’s early and recent trilogy eras.
+</div>
+
+<div class="title-divider"></div>
 
 :::: {.columns}
 
 ::: {.column width="50%"}
 ::: {.scroll-panel}
-### Mood shift (Valence vs Energy)
+### Mood shift
 
-Hier kun je je uitleg kwijt over hoe de valence en energy veranderen over albums of tracks.  
-Als deze tekst langer wordt, krijg je binnen dit vak gewoon een scrollbar.
+This scatterplot compares valence and energy across tracks from the two corpora.  
+It helps show whether the later trilogy moves toward a brighter, darker, calmer, or more intense emotional profile.
 
-![](img/The_Weeknd_EV.png){.plot-equal}
-
-Nog extra interpretatie onder de figuur kan ook hier staan.
+![](img/weeknd_plot1_mood_map_single.svg){.plot-equal}
 :::
 :::
 
@@ -27,12 +30,10 @@ Nog extra interpretatie onder de figuur kan ook hier staan.
 ::: {.scroll-panel}
 ### Audio fingerprint
 
-Hier kun je de uitleg van de audio fingerprint zetten.  
-Bijvoorbeeld welke nummers opvallen, wat de z-scores betekenen, en hoe je de verschillen leest.
+This heatmap summarizes highlighted tracks using standardized audio features.  
+It shows which songs stand out as more danceable, more acoustic, louder, or more emotionally bright relative to the full corpus.
 
-![](img/The_Weeknd_Audio_Fingerprint.png){.plot-equal}
-
-Ook hier kun je extra tekst toevoegen zonder dat de hele pagina uit verhouding raakt.
+![](img/weeknd_plot3_fingerprint_heatmap.svg){.plot-equal}
 :::
 :::
 

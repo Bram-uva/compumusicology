@@ -1,49 +1,125 @@
 :root{
-  --crimson:#dc143c;
-  --bg:#000000;
-  --panel:#0b0b0b;
-  --text:#f2f2f2;
-  --muted:#b9b9b9;
-  --border:rgba(220,20,60,.35);
+  --crimson: #e01b4f;
+  --crimson-soft: rgba(224, 27, 79, 0.22);
+  --crimson-line: rgba(224, 27, 79, 0.55);
+
+  --bg: #050505;
+  --bg-elev: #0b0b0c;
+  --panel: #101113;
+  --panel-2: #0d0e10;
+
+  --text: #f3f3f4;
+  --text-soft: #c9c9ce;
+  --muted: #9a9aa3;
+
+  --border: rgba(255,255,255,0.06);
+  --shadow: 0 10px 30px rgba(0,0,0,0.28);
+
+  --radius: 16px;
+  --radius-sm: 10px;
+
+  --content-width: 1120px;
 }
 
 /* =======================================================
-PAGE BASE
+BASE
 ======================================================= */
 
+html{
+  scroll-behavior: smooth;
+}
+
 html, body{
-  background: var(--bg) !important;
-  color: var(--text) !important;
   margin: 0;
   padding: 0;
+  background: radial-gradient(circle at top, #0a0a0b 0%, #050505 45%, #040404 100%);
+  color: var(--text);
 }
 
-body, .content, main, .page-columns, .page-full{
-  background: var(--bg) !important;
-  color: var(--text) !important;
-}
-
-/* ruimte voor vaste header */
 body{
-  padding-top: 72px;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.7;
+  letter-spacing: -0.01em;
+  padding-top: 74px;
 }
 
-/* Headings */
+/* main content width */
+#quarto-content main,
+main.content,
+.quarto-container,
+.page-layout-full .content{
+  max-width: var(--content-width) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 28px !important;
+  padding-right: 28px !important;
+  box-sizing: border-box;
+}
+
+/* hide default Quarto header */
+header#quarto-header{
+  display: none !important;
+}
+
+/* =======================================================
+TYPOGRAPHY
+======================================================= */
+
 h1, h2, h3, h4, h5, h6{
-  color: var(--crimson) !important;
+  margin-top: 0;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  color: var(--text);
+  font-weight: 700;
 }
 
-/* Links */
+h1.title,
+.quarto-title-block h1,
+main h1{
+  color: var(--crimson) !important;
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  font-weight: 750;
+  margin-bottom: 0.55rem;
+}
+
+h2{
+  font-size: clamp(1.7rem, 2.8vw, 2.2rem);
+  margin-bottom: 0.8rem;
+}
+
+h3{
+  font-size: 1.2rem;
+  margin-bottom: 0.65rem;
+  color: var(--text);
+}
+
+p{
+  margin: 0 0 1.15rem 0;
+  color: var(--text-soft);
+  font-size: 1.06rem;
+}
+
+strong{
+  color: var(--text);
+  font-weight: 700;
+}
+
+em{
+  color: #e7e7eb;
+}
+
 a, a:visited{
   color: var(--crimson);
   text-decoration: none;
+  transition: opacity 0.2s ease, color 0.2s ease, background-color 0.2s ease;
 }
+
 a:hover{
-  opacity: .85;
+  opacity: 0.92;
 }
 
 /* =======================================================
-CUSTOM TOPBAR
+TOPBAR
 ======================================================= */
 
 .topbar{
@@ -52,68 +128,175 @@ CUSTOM TOPBAR
   left: 0;
   right: 0;
   z-index: 9999;
-  background: var(--bg);
-  border-bottom: 2px solid var(--crimson);
+  backdrop-filter: blur(10px);
+  background: rgba(5, 5, 5, 0.82);
+  border-bottom: 1px solid var(--crimson-line);
 }
 
 .topbar-inner{
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 16px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 20px;
   gap: 20px;
 }
 
 .topbar-title{
   color: var(--text);
   font-weight: 700;
-  letter-spacing: .3px;
+  font-size: 0.98rem;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
 .topbar-nav{
   display: flex;
-  gap: 18px;
+  align-items: center;
+  gap: 10px;
 }
 
 .topbar-nav a{
-  color: var(--crimson) !important;
-  font-weight: 700;
-  padding: 6px 10px;
-  border-radius: 6px;
+  color: var(--text-soft) !important;
+  font-weight: 650;
+  font-size: 0.98rem;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: all 0.2s ease;
 }
 
 .topbar-nav a:hover{
-  background: rgba(220,20,60,.12);
+  color: var(--text) !important;
+  background: rgba(255,255,255,0.05);
+}
+
+.topbar-nav a[aria-current="page"]{
+  color: var(--bg) !important;
+  background: var(--crimson);
 }
 
 /* =======================================================
-HIDE DEFAULT QUARTO HEADER/NAVBAR
+TITLE AREA
 ======================================================= */
 
-header#quarto-header{
-  display: none !important;
+.quarto-title-block{
+  margin-top: 2.7rem;
+  margin-bottom: 1.1rem;
+}
+
+.quarto-title-block .subtitle,
+.page-subtitle{
+  color: var(--muted);
+  font-size: 1.04rem;
+  max-width: 720px;
+  margin-top: 0.4rem;
+}
+
+/* small divider under page title */
+.title-divider{
+  width: 84px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(to right, var(--crimson), transparent);
+  margin: 1rem 0 2rem 0;
 }
 
 /* =======================================================
-MAIN CONTENT WIDTH
+CALLOUT / PROJECT CARD
 ======================================================= */
 
-main.content,
-.quarto-container,
-.page-layout-full .content,
-#quarto-content{
-  max-width: 100% !important;
-  width: 100% !important;
+.callout{
+  position: relative;
+  background: linear-gradient(180deg, rgba(16,17,19,0.92), rgba(11,11,12,0.96)) !important;
+  color: var(--text) !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin: 1.4rem 0 1.8rem 0 !important;
 }
 
-/* iets meer ruimte links/rechts */
-#quarto-content main{
-  padding-left: 22px;
-  padding-right: 22px;
+.callout::before{
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--crimson), rgba(224, 27, 79, 0.08));
+}
+
+.callout .callout-header{
+  background: linear-gradient(90deg, rgba(224,27,79,0.10), rgba(255,255,255,0.015)) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  padding-top: 0.9rem !important;
+  padding-bottom: 0.9rem !important;
+}
+
+.callout .callout-title{
+  color: var(--text) !important;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.callout .callout-body-container,
+.callout .callout-body{
+  color: var(--text-soft) !important;
+}
+
+.callout p:last-child{
+  margin-bottom: 0;
 }
 
 /* =======================================================
-2-COLUMN LAYOUT
+GENERAL CARDS / SCROLL PANELS
+======================================================= */
+
+.scroll-panel,
+.card,
+.quarto-dashboard .card{
+  background: linear-gradient(180deg, rgba(16,17,19,0.98), rgba(10,10,11,0.98)) !important;
+  color: var(--text) !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow);
+}
+
+.scroll-panel{
+  padding: 20px;
+  min-height: 72vh;
+  max-height: 76vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.scroll-panel h3{
+  margin-bottom: 0.85rem;
+}
+
+.scroll-panel p{
+  font-size: 1rem;
+}
+
+.scroll-panel::-webkit-scrollbar{
+  width: 10px;
+}
+
+.scroll-panel::-webkit-scrollbar-track{
+  background: rgba(255,255,255,0.03);
+  border-radius: 999px;
+}
+
+.scroll-panel::-webkit-scrollbar-thumb{
+  background: rgba(224, 27, 79, 0.45);
+  border-radius: 999px;
+}
+
+.scroll-panel::-webkit-scrollbar-thumb:hover{
+  background: rgba(224, 27, 79, 0.65);
+}
+
+/* =======================================================
+COLUMNS
 ======================================================= */
 
 .columns{
@@ -121,6 +304,7 @@ main.content,
   gap: 24px;
   align-items: flex-start;
   flex-wrap: nowrap;
+  margin-top: 1.25rem;
 }
 
 .columns > .column{
@@ -128,7 +312,6 @@ main.content,
   min-width: 0;
 }
 
-/* mobiel */
 @media (max-width: 900px){
   .columns{
     flex-wrap: wrap;
@@ -138,72 +321,42 @@ main.content,
     width: 100%;
     flex-basis: 100%;
   }
-}
 
-/* =======================================================
-SCROLLABLE PANELS
-======================================================= */
+  .scroll-panel{
+    min-height: auto;
+    max-height: none;
+  }
 
-.scroll-panel{
-  background: var(--panel);
-  color: var(--text);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 18px;
-  box-shadow: 0 0 0 1px rgba(220,20,60,.10);
-  height: 78vh;
-  overflow-y: auto;
-  box-sizing: border-box;
-}
+  .topbar-inner{
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
 
-/* scrollbar styling */
-.scroll-panel::-webkit-scrollbar{
-  width: 10px;
-}
-.scroll-panel::-webkit-scrollbar-track{
-  background: #111;
-  border-radius: 10px;
-}
-.scroll-panel::-webkit-scrollbar-thumb{
-  background: rgba(220,20,60,.55);
-  border-radius: 10px;
-}
-
-/* =======================================================
-TEXT BLOCKS / CALLOUTS
-======================================================= */
-
-.callout{
-  background: var(--panel) !important;
-  color: var(--text) !important;
-  border: 1px solid var(--border) !important;
+  .topbar-title{
+    white-space: normal;
+  }
 }
 
 /* =======================================================
 FIGURES
 ======================================================= */
 
+figure{
+  margin: 1rem 0 0 0;
+  padding: 14px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
 img{
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 14px auto;
+  margin: 0 auto;
   border-radius: 10px;
 }
 
-figure{
-  padding: 12px;
-  background: #0b0b0b;
-  border: 1px solid rgba(220,20,60,.25);
-  border-radius: 12px;
-}
-
-.figure-caption,
-figcaption{
-  color: var(--muted) !important;
-}
-
-/* afbeelding iets netter in panel */
 .plot-equal{
   width: 100%;
   height: auto;
@@ -212,7 +365,50 @@ figcaption{
   margin: 0 auto;
 }
 
-/* paragrafen fijner leesbaar */
-p, li{
-  line-height: 1.6;
+.figure-caption,
+figcaption{
+  margin-top: 0.8rem;
+  color: var(--muted) !important;
+  font-size: 0.92rem;
+}
+
+/* =======================================================
+LISTS / HR / SMALL DETAILS
+======================================================= */
+
+ul, ol{
+  color: var(--text-soft);
+  padding-left: 1.25rem;
+}
+
+li{
+  margin-bottom: 0.35rem;
+}
+
+hr{
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, rgba(224,27,79,0.55), rgba(255,255,255,0.04));
+  margin: 2rem 0;
+}
+
+/* subtle selection styling */
+::selection{
+  background: rgba(224, 27, 79, 0.28);
+}
+
+/* =======================================================
+OPTIONAL HOME INTRO HELPERS
+======================================================= */
+
+.lead{
+  font-size: 1.08rem;
+  color: var(--muted);
+  max-width: 760px;
+  margin-bottom: 1.5rem;
+}
+
+.soft-note{
+  color: var(--muted);
+  font-size: 0.98rem;
 }

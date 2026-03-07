@@ -2,22 +2,15 @@
   {
     "objectID": "moods.html",
     "href": "moods.html",
-    "title": "The Weeknd",
+    "title": "Moods",
     "section": "",
-    "text": "Hier kun je je uitleg kwijt over hoe de valence en energy veranderen over albums of tracks.\nAls deze tekst langer wordt, krijg je binnen dit vak gewoon een scrollbar.\n\nNog extra interpretatie onder de figuur kan ook hier staan.\n\n\n\n\nHier kun je de uitleg van de audio fingerprint zetten.\nBijvoorbeeld welke nummers opvallen, wat de z-scores betekenen, en hoe je de verschillen leest.\n\nOok hier kun je extra tekst toevoegen zonder dat de hele pagina uit verhouding raakt."
-  },
-  {
-    "objectID": "moods.html#visuals",
-    "href": "moods.html#visuals",
-    "title": "The Weeknd",
-    "section": "",
-    "text": "Hier kun je je uitleg kwijt over hoe de valence en energy veranderen over albums of tracks.\nAls deze tekst langer wordt, krijg je binnen dit vak gewoon een scrollbar.\n\nNog extra interpretatie onder de figuur kan ook hier staan.\n\n\n\n\nHier kun je de uitleg van de audio fingerprint zetten.\nBijvoorbeeld welke nummers opvallen, wat de z-scores betekenen, en hoe je de verschillen leest.\n\nOok hier kun je extra tekst toevoegen zonder dat de hele pagina uit verhouding raakt."
+    "text": "Two visual comparisons of mood and sonic identity across The Weeknd’s early and recent trilogy eras.\n\n\n\n\n\n\n\nMood shift\nThis scatterplot compares valence and energy across tracks from the two corpora.\nIt helps show whether the later trilogy moves toward a brighter, darker, calmer, or more intense emotional profile.\n\n\n\n\nAudio fingerprint\nThis heatmap summarizes highlighted tracks using standardized audio features.\nIt shows which songs stand out as more danceable, more acoustic, louder, or more emotionally bright relative to the full corpus."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Home",
+    "title": "Trilogy vs Trilogy",
     "section": "",
-    "text": "Trilogy vs Trilogy\n\n\n\n\n\n\nNoteProject\n\n\n\nIn this project, I explore how The Weeknd’s music has evolved over time. As a corpus, I compare his first three mixtapes—later compiled as Trilogy—with his latest three albums: After Hours, Dawn FM, and Hurry Up Tomorrow.\nThe Weeknd himself has suggested that these recent projects form a new trilogy. Shortly after the release of Dawn FM in 2022, he tweeted: “I wonder… did you know you’re experiencing a new trilogy?”. In interviews, he has also spoken about wanting to close the chapter of his artistic persona “The Weeknd”, describing the process as a kind of transformation.\nBecause of these themes, the albums are often interpreted as a more conceptual or spiritual trilogy. Comparing The Weeknd’s first trilogy with his most recent one therefore offers an interesting way to examine how his voice, themes, and emotional tone have evolved over time.\n\n\nGo to Moods in the navigation bar to see the visualizations."
+    "text": "A computational comparison of The Weeknd’s early mixtape trilogy and his later album trilogy.\n\n\n\n\n\n\n\n\n\n\nNoteProject\n\n\n\nIn this project, I explore how The Weeknd’s music has evolved over time. As a corpus, I compare his first three mixtapes—later compiled as Trilogy—with his latest three albums: After Hours, Dawn FM, and Hurry Up Tomorrow.\nThe Weeknd himself has suggested that these recent projects form a new trilogy. Shortly after the release of Dawn FM in 2022, he tweeted that listeners might be “experiencing a new trilogy.” In interviews, he has also described these records as part of a broader transformation of his artistic persona.\nBecause of these themes, the albums are often interpreted as a conceptual or spiritual trilogy. Comparing The Weeknd’s first trilogy with his most recent one therefore offers an interesting way to examine how his voice, themes, and emotional tone have evolved over time.\n\n\n\nGo to Moods in the navigation bar to see the visualizations."
   }
 ]
