@@ -60,5 +60,17 @@ function toggleFullscreen(btn) {
   }
 }
 </script>
+<script>
+function toggleFullscreen(btn) {
+  const panel = btn.closest('.scroll-panel');
 
+  if (!document.fullscreenElement) {
+    panel.requestFullscreen().catch(err => {
+      console.error("Fullscreen failed:", err);
+    });
+  } else {
+    document.exitFullscreen();
+  }
+}
+</script>
 ::::

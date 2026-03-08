@@ -26,6 +26,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -36,8 +40,20 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c72ff888e19c609265736fd5c18e5ae4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-0774fc528949661fb60d8774007a227f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -70,6 +86,7 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Computational Musicology | Bram Ruben Schoen</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -117,48 +134,49 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="page-subtitle">
 <p>Two visual comparisons of mood and sonic identity across The Weeknd’s early and recent trilogy eras.</p>
-</div>
-<div class="title-divider">
-
-</div>
 <div class="columns">
 <div class="column" style="width:50%;">
-<section id="mood-shift" class="level3 scroll-panel">
-<h3 class="anchored" data-anchor-id="mood-shift">Mood shift</h3>
+<section id="mood-shift" class="level2">
+<h2 class="anchored" data-anchor-id="mood-shift">Mood shift</h2>
 <p>This scatterplot compares valence and energy across tracks from the two corpora.</p>
-<p><img src="img/weeknd_plot1_mood_map_single.png" class="plot-equal img-fluid"></p>
-<button class="expand-btn" onclick="toggleFullscreen(this)" aria-label="Open fullscreen">
+<div class="scroll-panel">
+<p><img src="weeknd_plot1_mood_map_single.png" class="plot-equal img-fluid"></p>
+<button class="expand-btn" onclick="toggleFullscreen(this)">
 <svg class="expand-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <path d="M8 3H3v5"></path> <path d="M16 3h5v5"></path> <path d="M21 16v5h-5"></path> <path d="M3 16v5h5"></path>
 </svg>
 </button>
+</div>
 </section>
 </div><div class="column" style="width:50%;">
-<section id="audio-fingerprint" class="level3 scroll-panel">
-<h3 class="anchored" data-anchor-id="audio-fingerprint">Audio fingerprint</h3>
+<section id="audio-fingerprint" class="level2">
+<h2 class="anchored" data-anchor-id="audio-fingerprint">Audio fingerprint</h2>
 <p>This heatmap summarizes highlighted tracks using standardized audio features.</p>
-<p><img src="img/weeknd_plot3_fingerprint_heatmap.png" class="plot-equal img-fluid"></p>
-<button class="expand-btn" onclick="toggleFullscreen(this)" aria-label="Open fullscreen">
+<div class="scroll-panel">
+<p><img src="weeknd_plot3_fingerprint_heatmap.png" class="plot-equal img-fluid"></p>
+<button class="expand-btn" onclick="toggleFullscreen(this)">
 <svg class="expand-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <path d="M8 3H3v5"></path> <path d="M16 3h5v5"></path> <path d="M21 16v5h-5"></path> <path d="M3 16v5h5"></path>
 </svg>
 </button>
+</div>
 </section>
-</div><script>
+</div>
+</div>
+<script>
 function toggleFullscreen(btn) {
   const panel = btn.closest('.scroll-panel');
+
   if (!document.fullscreenElement) {
     panel.requestFullscreen().catch(err => {
-      console.error("Fullscreen failed:", err);
+      console.error(err);
     });
   } else {
     document.exitFullscreen();
   }
 }
 </script>
-</div>
 
 
 

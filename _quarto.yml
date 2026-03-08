@@ -4,13 +4,11 @@ project:
 
 website:
   title: "Computational Musicology | Bram Ruben Schoen"
-  search: false
   navbar:
-    background: dark
     left:
-      - text: "Home"
+      - text: Home
         href: index.qmd
-      - text: "Moods"
+      - text: Moods
         href: moods.qmd
 
 format:
