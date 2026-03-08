@@ -2,75 +2,68 @@
 title: "Moods"
 ---
 
-<div class="page-subtitle">
 Two visual comparisons of mood and sonic identity across The Weeknd’s early and recent trilogy eras.
-</div>
 
-<div class="title-divider"></div>
-
-:::: {.columns}
+::: {.columns}
 
 ::: {.column width="50%"}
-::: {.scroll-panel}
-### Mood shift
+
+## Mood shift
 
 This scatterplot compares valence and energy across tracks from the two corpora.
 
-![](img/weeknd_plot1_mood_map_single.png){.plot-equal}
+<div class="scroll-panel">
 
-<button class="expand-btn" onclick="toggleFullscreen(this)" aria-label="Open fullscreen">
-  <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-    <path d="M8 3H3v5"></path>
-    <path d="M16 3h5v5"></path>
-    <path d="M21 16v5h-5"></path>
-    <path d="M3 16v5h5"></path>
-  </svg>
+![](weeknd_plot1_mood_map_single.png){.plot-equal}
+
+<button class="expand-btn" onclick="toggleFullscreen(this)">
+<svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<path d="M8 3H3v5"/>
+<path d="M16 3h5v5"/>
+<path d="M21 16v5h-5"/>
+<path d="M3 16v5h5"/>
+</svg>
 </button>
-:::
+
+</div>
+
 :::
 
 ::: {.column width="50%"}
-::: {.scroll-panel}
-### Audio fingerprint
+
+## Audio fingerprint
 
 This heatmap summarizes highlighted tracks using standardized audio features.
 
-![](img/weeknd_plot3_fingerprint_heatmap.png){.plot-equal}
+<div class="scroll-panel">
 
-<button class="expand-btn" onclick="toggleFullscreen(this)" aria-label="Open fullscreen">
-  <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-    <path d="M8 3H3v5"></path>
-    <path d="M16 3h5v5"></path>
-    <path d="M21 16v5h-5"></path>
-    <path d="M3 16v5h5"></path>
-  </svg>
+![](weeknd_plot3_fingerprint_heatmap.png){.plot-equal}
+
+<button class="expand-btn" onclick="toggleFullscreen(this)">
+<svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<path d="M8 3H3v5"/>
+<path d="M16 3h5v5"/>
+<path d="M21 16v5h-5"/>
+<path d="M3 16v5h5"/>
+</svg>
 </button>
-:::
+
+</div>
+
 :::
 
-<script>
-function toggleFullscreen(btn) {
-  const panel = btn.closest('.scroll-panel');
-  if (!document.fullscreenElement) {
-    panel.requestFullscreen().catch(err => {
-      console.error("Fullscreen failed:", err);
-    });
-  } else {
-    document.exitFullscreen();
-  }
-}
-</script>
+:::
+
 <script>
 function toggleFullscreen(btn) {
   const panel = btn.closest('.scroll-panel');
 
   if (!document.fullscreenElement) {
     panel.requestFullscreen().catch(err => {
-      console.error("Fullscreen failed:", err);
+      console.error(err);
     });
   } else {
     document.exitFullscreen();
   }
 }
 </script>
-::::
