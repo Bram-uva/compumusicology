@@ -14,7 +14,7 @@ This scatterplot compares valence and energy across tracks from the two corpora.
 
 <div class="scroll-panel">
 
-![](weeknd_plot1_mood_map_single.png){.plot-equal}
+![](img/weeknd_plot1_mood_map_single.png){.plot-equal}
 
 <button class="expand-btn" onclick="toggleFullscreen(this)">
 <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -37,7 +37,7 @@ This heatmap summarizes highlighted tracks using standardized audio features.
 
 <div class="scroll-panel">
 
-![](weeknd_plot3_fingerprint_heatmap.png){.plot-equal}
+![](img/weeknd_plot3_fingerprint_heatmap.png){.plot-equal}
 
 <button class="expand-btn" onclick="toggleFullscreen(this)">
 <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
