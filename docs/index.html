@@ -68,127 +68,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-</head><body class="nav-fixed quarto-light"><div class="topbar">
-
-  <div class="topbar-inner">
-
-    <div class="topbar-title">
-
-      Computational Musicology | Bram Ruben Schoen
-
-    </div>
-
-
-
-    <nav class="topbar-nav">
-
-      <a href="index.html">Home</a>
-
-      <a href="moods.html">Moods</a>
-
-    </nav>
-
-  </div>
-
-</div>
-
-
-
-<div class="panel-overlay" id="panelOverlay" onclick="closeExpandedPanel()"></div>
-
-
-
-<script>
-
-let activeExpandedPanel = null;
-
-
-
-function toggleExpand(button){
-
-  const panel = button.closest(".scroll-panel");
-
-  const overlay = document.getElementById("panelOverlay");
-
-
-
-  if (panel.classList.contains("expanded")) {
-
-    panel.classList.remove("expanded");
-
-    overlay.classList.remove("active");
-
-    document.body.classList.remove("modal-open");
-
-    activeExpandedPanel = null;
-
-    return;
-
-  }
-
-
-
-  if (activeExpandedPanel) {
-
-    activeExpandedPanel.classList.remove("expanded");
-
-  }
-
-
-
-  panel.classList.add("expanded");
-
-  overlay.classList.add("active");
-
-  document.body.classList.add("modal-open");
-
-  activeExpandedPanel = panel;
-
-}
-
-
-
-function closeExpandedPanel(){
-
-  const overlay = document.getElementById("panelOverlay");
-
-
-
-  if (activeExpandedPanel) {
-
-    activeExpandedPanel.classList.remove("expanded");
-
-    activeExpandedPanel = null;
-
-  }
-
-
-
-  overlay.classList.remove("active");
-
-  document.body.classList.remove("modal-open");
-
-}
-
-
-
-document.addEventListener("keydown", function(e){
-
-  if (e.key === "Escape") {
-
-    closeExpandedPanel();
-
-  }
-
-});
-
-</script>
 
 
 <link rel="stylesheet" href="styles.css">
+</head>
 
-
-
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -281,6 +166,99 @@ Go to <strong>Moods</strong> in the navigation bar to see the visualizations.
 
 
 </main> <!-- /main -->
+<div class="panel-overlay" id="panelOverlay" onclick="closeExpandedPanel()"></div>
+
+
+
+<script>
+
+let activeExpandedPanel = null;
+
+
+
+function toggleExpand(button) {
+
+  const panel = button.closest(".scroll-panel");
+
+  const overlay = document.getElementById("panelOverlay");
+
+
+
+  if (!panel || !overlay) return;
+
+
+
+  if (panel.classList.contains("expanded")) {
+
+    closeExpandedPanel();
+
+    return;
+
+  }
+
+
+
+  if (activeExpandedPanel) {
+
+    activeExpandedPanel.classList.remove("expanded");
+
+  }
+
+
+
+  panel.classList.add("expanded");
+
+  overlay.classList.add("active");
+
+  document.body.classList.add("modal-open");
+
+  activeExpandedPanel = panel;
+
+}
+
+
+
+function closeExpandedPanel() {
+
+  const overlay = document.getElementById("panelOverlay");
+
+
+
+  if (activeExpandedPanel) {
+
+    activeExpandedPanel.classList.remove("expanded");
+
+    activeExpandedPanel = null;
+
+  }
+
+
+
+  if (overlay) {
+
+    overlay.classList.remove("active");
+
+  }
+
+
+
+  document.body.classList.remove("modal-open");
+
+}
+
+
+
+document.addEventListener("keydown", function (e) {
+
+  if (e.key === "Escape") {
+
+    closeExpandedPanel();
+
+  }
+
+});
+
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

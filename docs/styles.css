@@ -16,9 +16,8 @@ html, body {
   min-height: 100%;
   color: var(--text);
   font-family: Inter, system-ui, sans-serif;
-
   background:
-    radial-gradient(circle at 15% 10%, rgba(6,41,135,0.45), transparent 40%),
+    radial-gradient(circle at 15% 10%, rgba(6, 41, 135, 0.45), transparent 40%),
     linear-gradient(
       180deg,
       #190208 0%,
@@ -27,7 +26,6 @@ html, body {
       #081a33 70%,
       #0a2a4a 100%
     );
-
   background-attachment: fixed;
 }
 
@@ -80,7 +78,7 @@ a:hover {
 }
 
 .navbar-nav .nav-link {
-  color: rgba(255,255,255,0.82) !important;
+  color: rgba(255, 255, 255, 0.82) !important;
   font-weight: 700;
 }
 
@@ -119,42 +117,19 @@ a:hover {
 
 .scroll-panel.expanded {
   position: fixed;
-  top: 5vh;
+  top: 3vh;
   left: 50%;
   transform: translateX(-50%);
-  width: min(1100px, 92vw);
-  max-height: 90vh;
-  z-index: 2000;
+  width: min(1200px, 94vw);
+  max-height: 94vh;
+  z-index: 2001;
   padding: 2rem;
   overflow-y: auto;
   overflow-x: hidden;
   border-radius: 24px;
-}
-
-.scroll-panel.expanded .expand-btn {
-  position: sticky;
-  left: calc(100% - 44px);
-  bottom: 0;
-  margin-top: 1rem;
-}
-
-body.modal-open {
-  overflow: hidden;
-}
-
-.panel-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s ease, visibility 0.2s ease;
-  z-index: 1900;
-}
-
-.panel-overlay.active {
-  opacity: 1;
-  visibility: visible;
+  background: #07293a;
+  border: 1px solid rgba(239, 190, 10, 0.22);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.6);
 }
 
 .column > h2,
@@ -167,7 +142,7 @@ body.modal-open {
 figure {
   margin: 1.2rem 0 0;
   padding: 1rem;
-  background: rgba(255,255,255,0.04);
+  background: rgba(255, 255, 255, 0.04);
   border-radius: 16px;
 }
 
@@ -196,9 +171,6 @@ figcaption {
   border-radius: 999px;
   background: rgba(239, 190, 10, 0.1);
   color: var(--title);
-}
-
-.expand-btn {
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -206,14 +178,43 @@ figcaption {
   z-index: 5;
 }
 
+.expand-btn:hover {
+  background: var(--accent);
+  color: white;
+}
+
 .expand-icon {
   width: 20px;
   height: 20px;
 }
 
-.expand-btn:hover {
-  background: var(--accent);
-  color: white;
+.scroll-panel.expanded .expand-btn {
+  position: sticky;
+  left: calc(100% - 44px);
+  bottom: 0;
+  margin-top: 1rem;
+}
+
+/* Overlay / modal behavior */
+body.modal-open {
+  overflow: hidden;
+}
+
+.panel-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 2000;
+}
+
+.panel-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 /* Mobile */
@@ -225,6 +226,13 @@ figcaption {
   .scroll-panel {
     min-height: auto;
     padding: 1.2rem;
+  }
+
+  .scroll-panel.expanded {
+    top: 2vh;
+    width: 96vw;
+    max-height: 94vh;
+    padding: 1.25rem;
   }
 
   p, li {

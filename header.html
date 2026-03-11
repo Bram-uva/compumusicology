@@ -1,30 +1,16 @@
-<div class="topbar">
-  <div class="topbar-inner">
-    <div class="topbar-title">
-      Computational Musicology | Bram Ruben Schoen
-    </div>
-
-    <nav class="topbar-nav">
-      <a href="index.html">Home</a>
-      <a href="moods.html">Moods</a>
-    </nav>
-  </div>
-</div>
-
 <div class="panel-overlay" id="panelOverlay" onclick="closeExpandedPanel()"></div>
 
 <script>
 let activeExpandedPanel = null;
 
-function toggleExpand(button){
+function toggleExpand(button) {
   const panel = button.closest(".scroll-panel");
   const overlay = document.getElementById("panelOverlay");
 
+  if (!panel || !overlay) return;
+
   if (panel.classList.contains("expanded")) {
-    panel.classList.remove("expanded");
-    overlay.classList.remove("active");
-    document.body.classList.remove("modal-open");
-    activeExpandedPanel = null;
+    closeExpandedPanel();
     return;
   }
 
@@ -38,7 +24,7 @@ function toggleExpand(button){
   activeExpandedPanel = panel;
 }
 
-function closeExpandedPanel(){
+function closeExpandedPanel() {
   const overlay = document.getElementById("panelOverlay");
 
   if (activeExpandedPanel) {
@@ -46,11 +32,14 @@ function closeExpandedPanel(){
     activeExpandedPanel = null;
   }
 
-  overlay.classList.remove("active");
+  if (overlay) {
+    overlay.classList.remove("active");
+  }
+
   document.body.classList.remove("modal-open");
 }
 
-document.addEventListener("keydown", function(e){
+document.addEventListener("keydown", function (e) {
   if (e.key === "Escape") {
     closeExpandedPanel();
   }
