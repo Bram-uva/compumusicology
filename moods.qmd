@@ -18,7 +18,7 @@ This scatterplot compares valence and energy across tracks from the two corpora.
 
 ![](img/weeknd_plot1_mood_map_single.png){.plot-equal}
 
-<button class="expand-btn" onclick="toggleFullscreen(this)" aria-label="Open fullscreen">
+<button class="expand-btn" onclick="toggleExpand(this)" aria-label="Open expanded view">
   <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
     <path d="M8 3H3v5"></path>
     <path d="M16 3h5v5"></path>
@@ -37,7 +37,7 @@ This heatmap summarizes highlighted tracks using standardized audio features.
 
 ![](img/weeknd_plot3_fingerprint_heatmap.png){.plot-equal}
 
-<button class="expand-btn" onclick="toggleFullscreen(this)" aria-label="Open fullscreen">
+<button class="expand-btn" onclick="toggleExpand(this)" aria-label="Open expanded view">
   <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
     <path d="M8 3H3v5"></path>
     <path d="M16 3h5v5"></path>
@@ -45,18 +45,6 @@ This heatmap summarizes highlighted tracks using standardized audio features.
     <path d="M3 16v5h5"></path>
   </svg>
 </button>
-<script>
-function toggleFullscreen(btn) {
-  const panel = btn.closest('.scroll-panel');
-  if (!document.fullscreenElement) {
-    panel.requestFullscreen().catch(err => {
-      console.error("Fullscreen failed:", err);
-    });
-  } else {
-    document.exitFullscreen();
-  }
-}
-</script>
 :::
 :::
 

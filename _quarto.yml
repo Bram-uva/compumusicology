@@ -10,6 +10,8 @@ website:
         href: index.qmd
       - text: Moods
         href: moods.qmd
+      - text: Chromagrams
+        href: chroma.qmd
 
 format:
   html:
@@ -17,3 +19,5 @@ format:
     css: styles.css
     toc: false
     page-layout: full
+    include-in-header:
+      - header.html

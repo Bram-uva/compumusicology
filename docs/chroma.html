@@ -100,6 +100,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./moods.html"> 
 <span class="menu-text">Moods</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./chroma.html" aria-current="page"> 
+<span class="menu-text">Chromagrams</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -172,7 +176,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="d.d." class="level4">
 <h4 class="anchored" data-anchor-id="d.d.">D.D.</h4>
 <p><img src="figures/chroma_euclidean_D_D_.png" class="img-fluid"></p>
-<button class="expand-btn" onclick="toggleFullscreen(this)" aria-label="Open fullscreen">
+<button class="expand-btn" onclick="toggleExpand(this)" aria-label="Open expanded view">
 <svg class="expand-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <path d="M8 3H3v5"></path> <path d="M16 3h5v5"></path> <path d="M21 16v5h-5"></path> <path d="M3 16v5h5"></path>
 </svg>
@@ -196,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="timeless" class="level4">
 <h4 class="anchored" data-anchor-id="timeless">Timeless</h4>
 <p><img src="figures/chroma_euclidean_Timeless.png" class="img-fluid"></p>
-<button class="expand-btn" onclick="toggleFullscreen(this)" aria-label="Open fullscreen">
+<button class="expand-btn" onclick="toggleExpand(this)" aria-label="Open expanded view">
 <svg class="expand-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <path d="M8 3H3v5"></path> <path d="M16 3h5v5"></path> <path d="M21 16v5h-5"></path> <path d="M3 16v5h5"></path>
 </svg>
@@ -212,7 +216,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="after-hours" class="level4">
 <h4 class="anchored" data-anchor-id="after-hours">After Hours</h4>
 <p><img src="figures/chroma_euclidean_After_Hours.png" class="img-fluid"></p>
-<button class="expand-btn" onclick="toggleFullscreen(this)" aria-label="Open fullscreen">
+<button class="expand-btn" onclick="toggleExpand(this)" aria-label="Open expanded view">
 <svg class="expand-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <path d="M8 3H3v5"></path> <path d="M16 3h5v5"></path> <path d="M21 16v5h-5"></path> <path d="M3 16v5h5"></path>
 </svg>
@@ -221,18 +225,6 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </div>
 </div>
-<script>
-function toggleFullscreen(btn) {
-  const panel = btn.closest('.scroll-panel');
-  if (!document.fullscreenElement) {
-    panel.requestFullscreen().catch(err => {
-      console.error("Fullscreen failed:", err);
-    });
-  } else {
-    document.exitFullscreen();
-  }
-}
-</script>
 
 
 

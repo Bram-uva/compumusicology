@@ -113,6 +113,48 @@ a:hover {
   padding: 1.5rem;
   min-height: 540px;
   position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.scroll-panel.expanded {
+  position: fixed;
+  top: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1100px, 92vw);
+  max-height: 90vh;
+  z-index: 2000;
+  padding: 2rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 24px;
+}
+
+.scroll-panel.expanded .expand-btn {
+  position: sticky;
+  left: calc(100% - 44px);
+  bottom: 0;
+  margin-top: 1rem;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.panel-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 1900;
+}
+
+.panel-overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .column > h2,
@@ -154,6 +196,19 @@ figcaption {
   border-radius: 999px;
   background: rgba(239, 190, 10, 0.1);
   color: var(--title);
+}
+
+.expand-btn {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.expand-icon {
+  width: 20px;
+  height: 20px;
 }
 
 .expand-btn:hover {

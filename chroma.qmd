@@ -40,7 +40,7 @@ Another shared feature is that these plots look more diffuse than block-based. T
 
 ![](figures/chroma_euclidean_D_D_.png)
 
-<button class="expand-btn" onclick="toggleFullscreen(this)" aria-label="Open fullscreen">
+<button class="expand-btn" onclick="toggleExpand(this)" aria-label="Open expanded view">
   <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
     <path d="M8 3H3v5"></path>
     <path d="M16 3h5v5"></path>
@@ -73,7 +73,7 @@ Compared to *Wicked Games*, *The Zone*, and *D.D.*, these three tracks seem more
 
 ![](figures/chroma_euclidean_Timeless.png)
 
-<button class="expand-btn" onclick="toggleFullscreen(this)" aria-label="Open fullscreen">
+<button class="expand-btn" onclick="toggleExpand(this)" aria-label="Open expanded view">
   <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
     <path d="M8 3H3v5"></path>
     <path d="M16 3h5v5"></path>
@@ -98,7 +98,7 @@ Unlike the second trilogy, the plot does not show strongly repeated block-like s
 
 ![](figures/chroma_euclidean_After_Hours.png)
 
-<button class="expand-btn" onclick="toggleFullscreen(this)" aria-label="Open fullscreen">
+<button class="expand-btn" onclick="toggleExpand(this)" aria-label="Open expanded view">
   <svg class="expand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
     <path d="M8 3H3v5"></path>
     <path d="M16 3h5v5"></path>
@@ -110,16 +110,3 @@ Unlike the second trilogy, the plot does not show strongly repeated block-like s
 :::
 
 ::::
-
-<script>
-function toggleFullscreen(btn) {
-  const panel = btn.closest('.scroll-panel');
-  if (!document.fullscreenElement) {
-    panel.requestFullscreen().catch(err => {
-      console.error("Fullscreen failed:", err);
-    });
-  } else {
-    document.exitFullscreen();
-  }
-}
-</script>
