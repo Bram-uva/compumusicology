@@ -68,12 +68,127 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+</head><body class="nav-fixed quarto-light"><div class="topbar">
+
+  <div class="topbar-inner">
+
+    <div class="topbar-title">
+
+      Computational Musicology | Bram Ruben Schoen
+
+    </div>
+
+
+
+    <nav class="topbar-nav">
+
+      <a href="index.html">Home</a>
+
+      <a href="moods.html">Moods</a>
+
+    </nav>
+
+  </div>
+
+</div>
+
+
+
+<div class="panel-overlay" id="panelOverlay" onclick="closeExpandedPanel()"></div>
+
+
+
+<script>
+
+let activeExpandedPanel = null;
+
+
+
+function toggleExpand(button){
+
+  const panel = button.closest(".scroll-panel");
+
+  const overlay = document.getElementById("panelOverlay");
+
+
+
+  if (panel.classList.contains("expanded")) {
+
+    panel.classList.remove("expanded");
+
+    overlay.classList.remove("active");
+
+    document.body.classList.remove("modal-open");
+
+    activeExpandedPanel = null;
+
+    return;
+
+  }
+
+
+
+  if (activeExpandedPanel) {
+
+    activeExpandedPanel.classList.remove("expanded");
+
+  }
+
+
+
+  panel.classList.add("expanded");
+
+  overlay.classList.add("active");
+
+  document.body.classList.add("modal-open");
+
+  activeExpandedPanel = panel;
+
+}
+
+
+
+function closeExpandedPanel(){
+
+  const overlay = document.getElementById("panelOverlay");
+
+
+
+  if (activeExpandedPanel) {
+
+    activeExpandedPanel.classList.remove("expanded");
+
+    activeExpandedPanel = null;
+
+  }
+
+
+
+  overlay.classList.remove("active");
+
+  document.body.classList.remove("modal-open");
+
+}
+
+
+
+document.addEventListener("keydown", function(e){
+
+  if (e.key === "Escape") {
+
+    closeExpandedPanel();
+
+  }
+
+});
+
+</script>
 
 
 <link rel="stylesheet" href="styles.css">
-</head>
 
-<body class="nav-fixed quarto-light">
+
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -99,6 +214,10 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item">
     <a class="nav-link active" href="./moods.html" aria-current="page"> 
 <span class="menu-text">Moods</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./chroma.html"> 
+<span class="menu-text">Chromagrams</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -146,7 +265,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="mood-shift">Mood shift</h3>
 <p>This scatterplot compares valence and energy across tracks from the two corpora.</p>
 <p><img src="img/weeknd_plot1_mood_map_single.png" class="plot-equal img-fluid"></p>
-<button class="expand-btn" onclick="toggleFullscreen(this)" aria-label="Open fullscreen">
+<button class="expand-btn" onclick="toggleExpand(this)" aria-label="Open expanded view">
 <svg class="expand-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <path d="M8 3H3v5"></path> <path d="M16 3h5v5"></path> <path d="M21 16v5h-5"></path> <path d="M3 16v5h5"></path>
 </svg>
@@ -157,23 +276,11 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="audio-fingerprint">Audio fingerprint</h3>
 <p>This heatmap summarizes highlighted tracks using standardized audio features.</p>
 <p><img src="img/weeknd_plot3_fingerprint_heatmap.png" class="plot-equal img-fluid"></p>
-<button class="expand-btn" onclick="toggleFullscreen(this)" aria-label="Open fullscreen">
+<button class="expand-btn" onclick="toggleExpand(this)" aria-label="Open expanded view">
 <svg class="expand-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <path d="M8 3H3v5"></path> <path d="M16 3h5v5"></path> <path d="M21 16v5h-5"></path> <path d="M3 16v5h5"></path>
 </svg>
 </button>
-<script>
-function toggleFullscreen(btn) {
-  const panel = btn.closest('.scroll-panel');
-  if (!document.fullscreenElement) {
-    panel.requestFullscreen().catch(err => {
-      console.error("Fullscreen failed:", err);
-    });
-  } else {
-    document.exitFullscreen();
-  }
-}
-</script>
 </section>
 </div>
 </div>
