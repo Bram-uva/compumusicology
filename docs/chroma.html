@@ -20,207 +20,225 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-.display.math{display: block; text-align: center; margin: 0.5rem auto;}
 </style>
 
 
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-html-734cb40618f438257b19a1e532635a32.min.css" rel="stylesheet" append-hash="true" data-mode="light">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-</head><body><div class="topbar">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-0774fc528949661fb60d8774007a227f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
 
-  <div class="topbar-inner">
 
-    <div class="topbar-title">
+<link rel="stylesheet" href="styles.css">
+</head>
 
-      Computational Musicology | Bram Ruben Schoen
+<body class="nav-fixed quarto-light">
 
-    </div>
-
-
-
-    <nav class="topbar-nav">
-
-      <a href="index.html">Home</a>
-
-      <a href="moods.html">Moods</a>
-
-    </nav>
-
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Computational Musicology | Bram Ruben Schoen</span>
+    </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./moods.html"> 
+<span class="menu-text">Moods</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content column-page" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Chromagrams</h1>
 </div>
 
 
 
-<div class="panel-overlay" id="panelOverlay" onclick="closeExpandedPanel()"></div>
+<div class="quarto-title-meta column-page">
 
+    
+  
+    
+  </div>
+  
 
-
-<script>
-
-let activeExpandedPanel = null;
-
-
-
-function toggleExpand(button){
-
-  const panel = button.closest(".scroll-panel");
-
-  const overlay = document.getElementById("panelOverlay");
-
-
-
-  if (panel.classList.contains("expanded")) {
-
-    panel.classList.remove("expanded");
-
-    overlay.classList.remove("active");
-
-    document.body.classList.remove("modal-open");
-
-    activeExpandedPanel = null;
-
-    return;
-
-  }
-
-
-
-  if (activeExpandedPanel) {
-
-    activeExpandedPanel.classList.remove("expanded");
-
-  }
-
-
-
-  panel.classList.add("expanded");
-
-  overlay.classList.add("active");
-
-  document.body.classList.add("modal-open");
-
-  activeExpandedPanel = panel;
-
-}
-
-
-
-function closeExpandedPanel(){
-
-  const overlay = document.getElementById("panelOverlay");
-
-
-
-  if (activeExpandedPanel) {
-
-    activeExpandedPanel.classList.remove("expanded");
-
-    activeExpandedPanel = null;
-
-  }
-
-
-
-  overlay.classList.remove("active");
-
-  document.body.classList.remove("modal-open");
-
-}
-
-
-
-document.addEventListener("keydown", function(e){
-
-  if (e.key === "Escape") {
-
-    closeExpandedPanel();
-
-  }
-
-});
-
-</script>
-
-
-<link rel="stylesheet" href="styles.css">
-
-
-
-
-
-<header id="title-block-header">
-<h1 class="title">Chromagrams</h1>
 
 </header>
 
 
-<p>&lt;div class=“page-subtitle”&gt; A chromagram-based comparison of harmonic structure across selected tracks from The Weeknd’s early trilogy and &lt;em&gt;After Hours&lt;/em&gt;. &lt;/div&gt;</p>
-<p>&lt;div class=“title-divider”&gt;&lt;/div&gt;</p>
-<div>
-<blockquote>
-<p><strong>Method</strong></p>
+<div class="page-subtitle">
+<p>A chromagram-based comparison of harmonic structure across selected tracks from The Weeknd’s early trilogy and <em>After Hours</em>.</p>
+</div>
+<div class="title-divider">
+
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Method
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>To analyse harmonic structure, Euclidean chromagrams were used. A chromagram maps spectral energy onto the twelve pitch classes (C–B) over time, independent of octave. This makes it useful for comparing harmonic content and repeated tonal patterns across tracks.</p>
 <p>At the same time, chromagrams do not show exact chords or melodies. Because octave information is removed, and because timbre, harmonics, and production effects can spread energy across multiple pitch classes, the visual patterns should be interpreted as indications of harmonic activity rather than literal note transcriptions.</p>
-</blockquote>
+</div>
 </div>
 <div class="columns">
 <div class="column" style="width:33%;">
-<section id="trilogy-i" class="scroll-panel">
-<h2 class="anchored">Trilogy I</h2>
-<h3 id="wicked-games-the-zone-and-d.d." class="anchored">*Wicked Games*, *The Zone*, and *D.D.*</h3>
+<section id="trilogy-i" class="level3 scroll-panel">
+<h3 class="anchored" data-anchor-id="trilogy-i">Trilogy I</h3>
+<p><em>Wicked Games</em>, <em>The Zone</em>, and <em>D.D.</em></p>
 <p>These three chromagrams show a relatively stable chroma profile across time. In all three tracks, a limited number of pitch classes remain active for long stretches, which creates strong horizontal bands. This suggests that the songs rely on a fairly stable tonal centre and a slower harmonic rhythm. Instead of frequent and sharply defined harmonic changes, the chroma energy evolves more gradually.</p>
 <p>Another shared feature is that these plots look more diffuse than block-based. The patterns are continuous rather than sharply segmented, which makes the tracks feel more atmospheric and texture-driven. Compared to the second trilogy, these songs seem less dependent on strongly repeated verse–chorus-like contrasts and more focused on maintaining a sustained harmonic mood over longer durations.</p>
-<h4 id="wicked-games" class="anchored">Wicked Games</h4>
-<p>![](chroma_euclidean_Wicked_Games.png)</p>
-<h4 id="the-zone" class="anchored">The Zone</h4>
-<p>![](chroma_euclidean_The_Zone.png)</p>
-<h4 id="d.d." class="anchored">D.D.</h4>
-<p>![](chroma_euclidean_D_D_.png)</p>
-<p>&lt;button class=“expand-btn” onclick=“toggleExpand(this)” aria-label=“Expand panel”&gt; &lt;svg class=“expand-icon” viewBox=“0 0 24 24” fill=“none” stroke=“currentColor” stroke-width=“2”&gt; &lt;path d=“M8 3H3v5”&gt;&lt;/path&gt; &lt;path d=“M16 3h5v5”&gt;&lt;/path&gt; &lt;path d=“M21 16v5h-5”&gt;&lt;/path&gt; &lt;path d=“M3 16v5h5”&gt;&lt;/path&gt; &lt;/svg&gt; &lt;/button&gt;</p>
+<section id="wicked-games" class="level4">
+<h4 class="anchored" data-anchor-id="wicked-games">Wicked Games</h4>
+<p><img src="figures/chroma_euclidean_Wicked_Games.png" class="img-fluid"></p>
+</section>
+<section id="the-zone" class="level4">
+<h4 class="anchored" data-anchor-id="the-zone">The Zone</h4>
+<p><img src="figures/chroma_euclidean_The_Zone.png" class="img-fluid"></p>
+</section>
+<section id="d.d." class="level4">
+<h4 class="anchored" data-anchor-id="d.d.">D.D.</h4>
+<p><img src="figures/chroma_euclidean_D_D_.png" class="img-fluid"></p>
+<button class="expand-btn" onclick="toggleFullscreen(this)" aria-label="Open fullscreen">
+<svg class="expand-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<path d="M8 3H3v5"></path> <path d="M16 3h5v5"></path> <path d="M21 16v5h-5"></path> <path d="M3 16v5h5"></path>
+</svg>
+</button>
+</section>
 </section>
 </div><div class="column" style="width:33%;">
-<section id="trilogy-ii" class="scroll-panel">
-<h2 class="anchored">Trilogy II</h2>
-<h3 id="blinding-lights-is-there-someone-else-and-timeless" class="anchored">*Blinding Lights*, *Is There Someone Else*, and *Timeless*</h3>
-<p>The chromagrams of *Blinding Lights*, *Is There Someone Else*, and *Timeless* show clearer structural contrast than the first trilogy. Instead of mostly continuous horizontal energy, these plots contain more visible vertical changes, where several pitch classes become stronger or weaker at the same time. This suggests more frequent harmonic shifts and stronger repetition of recurring progressions.</p>
-<p>Compared to *Wicked Games*, *The Zone*, and *D.D.*, these three tracks seem more clearly organised into repeated musical sections. The visual repetitions in the chromagrams may correspond to recurring formal units such as verses or choruses. Overall, this group appears more loop-based and pop-structured, while the first trilogy is more atmospheric and harmonically diffuse.</p>
-<h4 id="blinding-lights" class="anchored">Blinding Lights</h4>
-<p>![](chroma_euclidean_Blinding_Lights.png)</p>
-<h4 id="is-there-someone-else" class="anchored">Is There Someone Else</h4>
-<p>![](chroma_euclidean_Is_There_Someone_Else.png)</p>
-<h4 id="timeless" class="anchored">Timeless</h4>
-<p>![](figures/chroma_euclidean_Timeless.png)</p>
-<p>&lt;button class=“expand-btn” onclick=“toggleExpand(this)” aria-label=“Expand panel”&gt; &lt;svg class=“expand-icon” viewBox=“0 0 24 24” fill=“none” stroke=“currentColor” stroke-width=“2”&gt; &lt;path d=“M8 3H3v5”&gt;&lt;/path&gt; &lt;path d=“M16 3h5v5”&gt;&lt;/path&gt; &lt;path d=“M21 16v5h-5”&gt;&lt;/path&gt; &lt;path d=“M3 16v5h5”&gt;&lt;/path&gt; &lt;/svg&gt; &lt;/button&gt;</p>
+<section id="trilogy-ii" class="level3 scroll-panel">
+<h3 class="anchored" data-anchor-id="trilogy-ii">Trilogy II</h3>
+<p><em>Blinding Lights</em>, <em>Is There Someone Else</em>, and <em>Timeless</em></p>
+<p>The chromagrams of <em>Blinding Lights</em>, <em>Is There Someone Else</em>, and <em>Timeless</em> show clearer structural contrast than the first trilogy. Instead of mostly continuous horizontal energy, these plots contain more visible vertical changes, where several pitch classes become stronger or weaker at the same time. This suggests more frequent harmonic shifts and stronger repetition of recurring progressions.</p>
+<p>Compared to <em>Wicked Games</em>, <em>The Zone</em>, and <em>D.D.</em>, these three tracks seem more clearly organised into repeated musical sections. The visual repetitions in the chromagrams may correspond to recurring formal units such as verses or choruses. Overall, this group appears more loop-based and pop-structured, while the first trilogy is more atmospheric and harmonically diffuse.</p>
+<section id="blinding-lights" class="level4">
+<h4 class="anchored" data-anchor-id="blinding-lights">Blinding Lights</h4>
+<p><img src="figures/chroma_euclidean_Blinding_Lights.png" class="img-fluid"></p>
+</section>
+<section id="is-there-someone-else" class="level4">
+<h4 class="anchored" data-anchor-id="is-there-someone-else">Is There Someone Else</h4>
+<p><img src="figures/chroma_euclidean_Is_There_Someone_Else.png" class="img-fluid"></p>
+</section>
+<section id="timeless" class="level4">
+<h4 class="anchored" data-anchor-id="timeless">Timeless</h4>
+<p><img src="figures/chroma_euclidean_Timeless.png" class="img-fluid"></p>
+<button class="expand-btn" onclick="toggleFullscreen(this)" aria-label="Open fullscreen">
+<svg class="expand-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<path d="M8 3H3v5"></path> <path d="M16 3h5v5"></path> <path d="M21 16v5h-5"></path> <path d="M3 16v5h5"></path>
+</svg>
+</button>
+</section>
 </section>
 </div><div class="column" style="width:33%;">
-<section id="solo-analysis" class="scroll-panel">
-<h2 class="anchored">Solo Analysis</h2>
-<h3 id="after-hours" class="anchored">*After Hours*</h3>
-<p>The chromagram of *After Hours* stands somewhat apart from the other two groups. Like the first trilogy, it shows long-term tonal stability: several pitch classes remain active over large parts of the track, which creates a fairly coherent harmonic profile. At the same time, the energy distribution changes gradually across the duration of the song.</p>
-<p>Unlike the second trilogy, the plot does not show strongly repeated block-like structures. Instead, the harmonic texture seems to develop slowly, with some pitch classes becoming more prominent in later sections while others fade into the background. This suggests that the track builds through gradual layering and changes in harmonic density rather than through frequent, sharply contrasted sections. Because of that, *After Hours* functions well as a bridge between atmospheric stability and subtle internal development, but it also justifies being treated as a separate case.</p>
-<h4 id="after-hours-1" class="anchored">After Hours</h4>
-<p>![](chroma_euclidean_After_Hours.png)</p>
-<p>&lt;button class=“expand-btn” onclick=“toggleExpand(this)” aria-label=“Expand panel”&gt; &lt;svg class=“expand-icon” viewBox=“0 0 24 24” fill=“none” stroke=“currentColor” stroke-width=“2”&gt; &lt;path d=“M8 3H3v5”&gt;&lt;/path&gt; &lt;path d=“M16 3h5v5”&gt;&lt;/path&gt; &lt;path d=“M21 16v5h-5”&gt;&lt;/path&gt; &lt;path d=“M3 16v5h5”&gt;&lt;/path&gt; &lt;/svg&gt; &lt;/button&gt;</p>
+<section id="solo-analysis" class="level3 scroll-panel">
+<h3 class="anchored" data-anchor-id="solo-analysis">Solo Analysis</h3>
+<p><em>After Hours</em></p>
+<p>The chromagram of <em>After Hours</em> stands somewhat apart from the other two groups. Like the first trilogy, it shows long-term tonal stability: several pitch classes remain active over large parts of the track, which creates a fairly coherent harmonic profile. At the same time, the energy distribution changes gradually across the duration of the song.</p>
+<p>Unlike the second trilogy, the plot does not show strongly repeated block-like structures. Instead, the harmonic texture seems to develop slowly, with some pitch classes becoming more prominent in later sections while others fade into the background. This suggests that the track builds through gradual layering and changes in harmonic density rather than through frequent, sharply contrasted sections. Because of that, <em>After Hours</em> functions well as a bridge between atmospheric stability and subtle internal development, but it also justifies being treated as a separate case.</p>
+<section id="after-hours" class="level4">
+<h4 class="anchored" data-anchor-id="after-hours">After Hours</h4>
+<p><img src="figures/chroma_euclidean_After_Hours.png" class="img-fluid"></p>
+<button class="expand-btn" onclick="toggleFullscreen(this)" aria-label="Open fullscreen">
+<svg class="expand-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<path d="M8 3H3v5"></path> <path d="M16 3h5v5"></path> <path d="M21 16v5h-5"></path> <path d="M3 16v5h5"></path>
+</svg>
+</button>
+</section>
 </section>
 </div>
 </div>
-<p>```</p>
+<script>
+function toggleFullscreen(btn) {
+  const panel = btn.closest('.scroll-panel');
+  if (!document.fullscreenElement) {
+    panel.requestFullscreen().catch(err => {
+      console.error("Fullscreen failed:", err);
+    });
+  } else {
+    document.exitFullscreen();
+  }
+}
+</script>
 
 
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
-    tabsets.forEach(function(tabset) {
-      const tabby = new Tabby('#' + tabset.id);
-    });
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -319,7 +337,7 @@ document.addEventListener("keydown", function(e){
         },
         interactive: true,
         interactiveBorder: 10,
-        theme: 'light-border',
+        theme: 'quarto',
         placement: 'bottom-start',
       };
       if (contentFn) {
@@ -619,6 +637,7 @@ document.addEventListener("keydown", function(e){
     }
   });
   </script>
+</div> <!-- /content -->
 
 
 
