@@ -1,14 +1,20 @@
 ---
-title: "Trilogy vs Trilogy"
+title: "Computational Musicology 2026"
+author: "Bram Schoen"
+format:
+  dashboard:
+    orientation: columns
+editor: visual
+lang: en
+theme: journal
 ---
-<div class="page-subtitle">
-A computational comparison of The Weeknd’s early mixtape trilogy and his later album trilogy.
-</div>
 
-<div class="title-divider"></div>
+## Row
 
-::: {.callout-note}
-## Project
+# Corpus
+
+::: card
+### Corpus
 
 In this project, I explore how The Weeknd’s music has evolved over time. As a corpus, I compare his first three mixtapes—later compiled as *Trilogy*—with his latest three albums: *After Hours*, *Dawn FM*, and *Hurry Up Tomorrow*.
 
@@ -17,4 +23,42 @@ The Weeknd himself has suggested that these recent projects form a new trilogy. 
 Because of these themes, the albums are often interpreted as a conceptual or spiritual trilogy. Comparing The Weeknd’s first trilogy with his most recent one therefore offers an interesting way to examine how his voice, themes, and emotional tone have evolved over time.
 :::
 
-<p class="soft-note">Go to <strong>Moods</strong> in the navigation bar to see the visualizations.</p>
+::: card
+# Moods 
+![](img/weeknd_plot1_mood_map_single.png)
+::: 
+
+# Chromagrams
+
+::: card
+### 
+
+![](tears_dry_chromagram.png)
+:::
+
+::: card
+### Green Day chromagram
+
+![](american_idiot_chromagram.png)
+:::
+
+## Row
+
+# Cepstograms
+
+::: card
+### Amy Winehouse cepstogram
+
+![](amy_timbre_chebyshev.png)
+:::
+
+::: card
+### Green Day cepstogram
+
+![](greenday_timbre_chebyshev.png)
+:::
+
+# Tempograms
+
+::: card
+:::
