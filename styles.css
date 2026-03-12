@@ -1,0 +1,174 @@
+/* ===== Algemene pagina ===== */
+body {
+  margin: 0;
+  background: linear-gradient(90deg, #0a2b59 0%, #050016 52%, #210012 100%);
+  color: #f4f4f4;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* hoofdcontent iets ruimer zoals in je voorbeeld */
+main.content,
+.page-columns,
+.quarto-dashboard-content,
+.dashboard-page {
+  padding-top: 2rem;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background: #2a0009 !important;
+  border-bottom: 2px solid #ff2d6f !important;
+  box-shadow: none !important;
+}
+
+.navbar-brand,
+.navbar-brand:visited {
+  color: #f2c100 !important;
+  font-weight: 900;
+  font-size: 1.15rem;
+  letter-spacing: 0.2px;
+}
+
+.navbar .navbar-title {
+  color: #f2c100 !important;
+  font-weight: 900;
+}
+
+.navbar-nav .nav-link {
+  color: #f4f4f4 !important;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-right: 0.4rem;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #ff2d6f !important;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .active > .nav-link,
+.navbar-nav .show > .nav-link {
+  color: #ff2d6f !important;
+  background: transparent !important;
+}
+
+/* ===== Titels ===== */
+h1,
+.title {
+  color: #f2c100 !important;
+  font-weight: 900 !important;
+  font-size: clamp(3.8rem, 8vw, 7rem) !important;
+  line-height: 0.95;
+  letter-spacing: -1px;
+  margin-bottom: 1.2rem;
+}
+
+h2 {
+  color: #f2c100 !important;
+  font-weight: 900 !important;
+  font-size: clamp(2.2rem, 4vw, 3.6rem) !important;
+  margin-bottom: 0.8rem;
+}
+
+h3, h4 {
+  color: #f2c100 !important;
+  font-weight: 800 !important;
+}
+
+p, li {
+  color: #f3f3f3;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+/* ===== Cards ===== */
+.card,
+.quarto-dashboard .card,
+.dashboard-card,
+.valuebox,
+div.card {
+  background: #0c3447 !important;
+  color: #f4f4f4 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 26px !important;
+  box-shadow: none !important;
+  overflow: hidden;
+}
+
+.card-header,
+.card-title {
+  background: transparent !important;
+  color: #f2c100 !important;
+  border-bottom: 1px solid rgba(242, 193, 0, 0.18) !important;
+  font-weight: 900 !important;
+}
+
+.card-body {
+  color: #f4f4f4 !important;
+}
+
+/* meer ruimte in cards */
+.card-header,
+.card-body,
+.card-footer {
+  padding-left: 1.4rem !important;
+  padding-right: 1.4rem !important;
+}
+
+/* ===== Intro / lead tekst ===== */
+.lead,
+.subtitle,
+.quarto-title-meta,
+.description {
+  color: #f4f4f4 !important;
+  max-width: 1000px;
+}
+
+/* ===== Afbeeldingen ===== */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* ===== Links ===== */
+a {
+  color: #ff2d6f;
+}
+
+a:hover {
+  color: #ff5f91;
+}
+
+/* ===== Eventuele codeblokken minder opvallend ===== */
+pre, code {
+  border-radius: 8px;
+}
+
+/* ===== Dashboard tabs / page navigation ===== */
+.nav-tabs .nav-link {
+  color: #f4f4f4 !important;
+  font-weight: 700;
+}
+
+.nav-tabs .nav-link.active {
+  color: #ff2d6f !important;
+  background: transparent !important;
+  border-color: transparent transparent #ff2d6f transparent !important;
+}
+
+/* ===== Scrollbars subtieler ===== */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.18);
+}

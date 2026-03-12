@@ -50,6 +50,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="quarto-dashboard dashboard-fill fullcontent quarto-light">
@@ -71,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
         <div class="navbar-author">Bram Schoen</div>
       </div>
     </div>
-<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-corpus" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#corpus" data-scrolling="false" href="#corpus" aria-controls="corpus" aria-selected="true"><span class="nav-link-text">Corpus</span></a></li><li class="nav-item" role="presentation"><a id="tab-chromagrams" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#chromagrams" data-scrolling="false" href="#chromagrams" aria-controls="chromagrams" aria-selected="false"><span class="nav-link-text">Chromagrams</span></a></li><li class="nav-item" role="presentation"><a id="tab-cepstograms" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#cepstograms" data-scrolling="false" href="#cepstograms" aria-controls="cepstograms" aria-selected="false"><span class="nav-link-text">Cepstograms</span></a></li><li class="nav-item" role="presentation"><a id="tab-tempograms" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#tempograms" data-scrolling="false" href="#tempograms" aria-controls="tempograms" aria-selected="false"><span class="nav-link-text">Tempograms</span></a></li></ul></div></div>
+<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-corpus" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#corpus" data-scrolling="false" href="#corpus" aria-controls="corpus" aria-selected="true"><span class="nav-link-text">Corpus</span></a></li><li class="nav-item" role="presentation"><a id="tab-moods" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#moods" data-scrolling="false" href="#moods" aria-controls="moods" aria-selected="false"><span class="nav-link-text">Moods</span></a></li><li class="nav-item" role="presentation"><a id="tab-chromagrams" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#chromagrams" data-scrolling="false" href="#chromagrams" aria-controls="chromagrams" aria-selected="false"><span class="nav-link-text">Chromagrams</span></a></li><li class="nav-item" role="presentation"><a id="tab-cepstograms" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#cepstograms" data-scrolling="false" href="#cepstograms" aria-controls="cepstograms" aria-selected="false"><span class="nav-link-text">Cepstograms</span></a></li><li class="nav-item" role="presentation"><a id="tab-tempograms" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#tempograms" data-scrolling="false" href="#tempograms" aria-controls="tempograms" aria-selected="false"><span class="nav-link-text">Tempograms</span></a></li></ul></div></div>
 </nav>
 </header>
 <div class="page-layout-custom quarto-dashboard-content bslib-gap-spacing html-fill-container bslib-page-fill quarto-dashboard-pages">  
@@ -79,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="bslib-grid-item html-fill-item tab-content bslib-grid" data-layout="fill" style="display: grid; grid-template-columns: minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
 <div id="corpus" class="dashboard-page tab-pane show active html-fill-item html-fill-container" data-orientation="columns" aria-labelledby="tab-corpus">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
 <div class="card html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-body html-fill-item html-fill-container">
@@ -95,7 +96,12 @@ Corpus
     <span class="bslib-full-screen-enter badge rounded-pill">
         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
     </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div><div id="moods" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="columns" aria-labelledby="tab-moods">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-body html-fill-item html-fill-container">
 <div class="h4">
 Moods
@@ -110,14 +116,30 @@ Moods
 </bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
 </div>
 </div><div id="chromagrams" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="columns" aria-labelledby="tab-chromagrams">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
 <div class="card html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-body html-fill-item html-fill-container">
 <div class="h4">
+D.D.
 
+/
+
+Wicked
+
+Games
+
+/
+
+The
+
+Zone
+
+(Euclidean)
 </div>
-<img src="tears_dry_chromagram.png" class="img-fluid">
+<img src="figures/chroma_euclidean_D_D_.png" class="img-fluid" style="width:100.0%">
+<img src="figures/chroma_euclidean_Wicked_Games.png" class="img-fluid" style="width:100.0%">
+<img src="figures/chroma_euclidean_The_Zone.png" class="img-fluid" style="width:100.0%">
 </div>
 <bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
     <template>Expand</template>
@@ -127,13 +149,45 @@ grid-auto-rows: minmax(0, 1fr);">
 </bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-body html-fill-item html-fill-container">
 <div class="h4">
-Green
+Blinding
 
-Day
+Lights
 
-chromagram
+/
+
+Is
+
+There
+
+Someone
+
+Else
+
+/
+
+Timeless
+
+(Euclidean)
 </div>
-<img src="american_idiot_chromagram.png" class="img-fluid">
+<img src="figures/chroma_euclidean_Blinding_Lights.png" class="img-fluid" style="width:100.0%">
+<img src="figures/chroma_euclidean_Is_There_Someone_Else.png" class="img-fluid" style="width:100.0%">
+<img src="figures/chroma_euclidean_Timeless.png" class="img-fluid" style="width:100.0%">
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="h4">
+After
+
+Hours
+
+(Euclidean)
+</div>
+<img src="figures/chroma_euclidean_After_Hours.png" class="img-fluid" style="width:100.0%">
 </div>
 <bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
     <template>Expand</template>
@@ -148,9 +202,9 @@ grid-auto-rows: minmax(0, 1fr);">
 <div class="card html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-body html-fill-item html-fill-container">
 <div class="h4">
-Amy
+The
 
-Winehouse
+Weeknd
 
 cepstogram
 </div>
@@ -164,9 +218,9 @@ cepstogram
 </bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-body html-fill-item html-fill-container">
 <div class="h4">
-Green
+The
 
-Day
+Weeknd
 
 cepstogram
 </div>
@@ -180,10 +234,52 @@ cepstogram
 </bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
 </div>
 </div><div id="tempograms" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="columns" aria-labelledby="tab-tempograms">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
 <div class="card html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="h4">
+After
 
+Hours
+
+Novelty
+
+Curve
+</div>
+<img src="figures/Novelty_Curve_After_Hours.png" class="img-fluid" style="width:100.0%">
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="h4">
+Analysis
+</div>
+<p>The novelty curve visualizes how much the musical signal changes over time. Peaks in the curve represent moments where the audio features differ strongly from the previous segment, which often corresponds to rhythmic events or structural changes in the music.</p>
+<p>In the novelty curve of After Hours, the number and intensity of peaks vary throughout the track. The first part of the song shows relatively fewer peaks, suggesting a more stable and less dense rhythmic structure. Around the middle section of the track, the novelty values increase significantly, indicating more frequent musical events and a higher level of rhythmic activity. This likely corresponds to a section where additional rhythmic or instrumental elements are introduced.</p>
+<p>The tempogram provides insight into the tempo structure of the track by showing the strength of rhythmic periodicities at different tempo levels over time. In the tempogram of After Hours, a clear horizontal band can be observed, indicating a relatively stable tempo throughout the track. Several additional horizontal bands appear at regular intervals above and below the main tempo band. These bands represent tempo harmonics, which occur because rhythmic patterns can be perceived at multiple metrical levels.</p>
+<p>Overall, the visualization suggests that the track maintains a consistent tempo while the rhythmic density changes over time, which is reflected in the varying intensity of the novelty curve.</p>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="h4">
+After
+
+Hours
+
+Tempogram
+</div>
+<img src="figures/Tempogram_After_Hours.png" class="img-fluid" style="width:100.0%">
+</div>
 <bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
     <template>Expand</template>
     <span class="bslib-full-screen-enter badge rounded-pill">

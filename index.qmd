@@ -4,6 +4,7 @@ author: "Bram Schoen"
 format:
   dashboard:
     orientation: columns
+    css: styles.css
 editor: visual
 lang: en
 theme: journal
@@ -23,23 +24,41 @@ The Weeknd himself has suggested that these recent projects form a new trilogy. 
 Because of these themes, the albums are often interpreted as a conceptual or spiritual trilogy. Comparing The Weeknd’s first trilogy with his most recent one therefore offers an interesting way to examine how his voice, themes, and emotional tone have evolved over time.
 :::
 
+# Moods
 ::: card
-# Moods 
+### Moods
+
 ![](img/weeknd_plot1_mood_map_single.png)
-::: 
+:::
 
+
+
+## Row
 # Chromagrams
-
 ::: card
-### 
+### D.D. / Wicked Games / The Zone (Euclidean)
 
-![](tears_dry_chromagram.png)
+![](figures/chroma_euclidean_D_D_.png){width=100%}
+
+![](figures/chroma_euclidean_Wicked_Games.png){width=100%}
+
+![](figures/chroma_euclidean_The_Zone.png){width=100%}
 :::
 
 ::: card
-### Green Day chromagram
+### Blinding Lights / Is There Someone Else / Timeless (Euclidean)
 
-![](american_idiot_chromagram.png)
+![](figures/chroma_euclidean_Blinding_Lights.png){width=100%}
+
+![](figures/chroma_euclidean_Is_There_Someone_Else.png){width=100%}
+
+![](figures/chroma_euclidean_Timeless.png){width=100%}
+:::
+
+::: card 
+### After Hours (Euclidean)
+
+![](figures/chroma_euclidean_After_Hours.png){width=100%}
 :::
 
 ## Row
@@ -47,13 +66,13 @@ Because of these themes, the albums are often interpreted as a conceptual or spi
 # Cepstograms
 
 ::: card
-### Amy Winehouse cepstogram
+### The Weeknd cepstogram
 
 ![](amy_timbre_chebyshev.png)
 :::
 
 ::: card
-### Green Day cepstogram
+### The Weeknd cepstogram
 
 ![](greenday_timbre_chebyshev.png)
 :::
@@ -61,4 +80,26 @@ Because of these themes, the albums are often interpreted as a conceptual or spi
 # Tempograms
 
 ::: card
+### After Hours Novelty Curve
+
+![](figures/Novelty_Curve_After_Hours.png){width=100%}
+
+:::
+
+::: card
+### Analysis
+The novelty curve visualizes how much the musical signal changes over time. Peaks in the curve represent moments where the audio features differ strongly from the previous segment, which often corresponds to rhythmic events or structural changes in the music.
+
+In the novelty curve of After Hours, the number and intensity of peaks vary throughout the track. The first part of the song shows relatively fewer peaks, suggesting a more stable and less dense rhythmic structure. Around the middle section of the track, the novelty values increase significantly, indicating more frequent musical events and a higher level of rhythmic activity. This likely corresponds to a section where additional rhythmic or instrumental elements are introduced.
+
+The tempogram provides insight into the tempo structure of the track by showing the strength of rhythmic periodicities at different tempo levels over time. In the tempogram of After Hours, a clear horizontal band can be observed, indicating a relatively stable tempo throughout the track. Several additional horizontal bands appear at regular intervals above and below the main tempo band. These bands represent tempo harmonics, which occur because rhythmic patterns can be perceived at multiple metrical levels.
+
+Overall, the visualization suggests that the track maintains a consistent tempo while the rhythmic density changes over time, which is reflected in the varying intensity of the novelty curve.
+
+:::
+
+::: card 
+### After Hours Tempogram
+
+![](figures/Tempogram_After_Hours.png){width=100%}
 :::
