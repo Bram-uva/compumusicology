@@ -107,7 +107,30 @@ Overall, the visualization suggests that the track maintains a consistent tempo 
 
 
 # Dendogram
-:::
-### Chroma Dendogram
+::: card
+### Chroma Dendogram 1
 
-![](Dendogram_Chroma.png){width=100%}
+![](trilogy1_dendrogram.png){width=100%}
+
+:::
+
+
+
+::: card
+### Analysis
+
+The dendrogram for Trilogy 1 shows several clearly defined clusters, indicating strong variation between tracks. Songs group together based on similarities in their audio features, forming distinct sub-clusters that likely reflect differences in mood, structure, and production style.
+
+In contrast, the dendrogram for Trilogy 2 appears more compact and less clearly separated. Many tracks cluster together at lower distances, suggesting that they share more similar feature profiles. This indicates a more consistent and homogeneous sound across the album.
+
+Overall, the comparison suggests that Trilogy 1 is more diverse and experimental, while Trilogy 2 exhibits a more uniform and polished sound.
+
+:::
+
+
+::: card
+### Dendogram 2
+
+![](trilogy2_dendrogram.png){width=100%}
+
+:::

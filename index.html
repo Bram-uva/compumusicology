@@ -72,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
         <div class="navbar-author">Bram Schoen</div>
       </div>
     </div>
-<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-corpus" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#corpus" data-scrolling="false" href="#corpus" aria-controls="corpus" aria-selected="true"><span class="nav-link-text">Corpus</span></a></li><li class="nav-item" role="presentation"><a id="tab-moods" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#moods" data-scrolling="false" href="#moods" aria-controls="moods" aria-selected="false"><span class="nav-link-text">Moods</span></a></li><li class="nav-item" role="presentation"><a id="tab-chromagrams" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#chromagrams" data-scrolling="false" href="#chromagrams" aria-controls="chromagrams" aria-selected="false"><span class="nav-link-text">Chromagrams</span></a></li><li class="nav-item" role="presentation"><a id="tab-cepstograms" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#cepstograms" data-scrolling="false" href="#cepstograms" aria-controls="cepstograms" aria-selected="false"><span class="nav-link-text">Cepstograms</span></a></li><li class="nav-item" role="presentation"><a id="tab-tempograms" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#tempograms" data-scrolling="false" href="#tempograms" aria-controls="tempograms" aria-selected="false"><span class="nav-link-text">Tempograms</span></a></li></ul></div></div>
+<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-corpus" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#corpus" data-scrolling="false" href="#corpus" aria-controls="corpus" aria-selected="true"><span class="nav-link-text">Corpus</span></a></li><li class="nav-item" role="presentation"><a id="tab-moods" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#moods" data-scrolling="false" href="#moods" aria-controls="moods" aria-selected="false"><span class="nav-link-text">Moods</span></a></li><li class="nav-item" role="presentation"><a id="tab-chromagrams" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#chromagrams" data-scrolling="false" href="#chromagrams" aria-controls="chromagrams" aria-selected="false"><span class="nav-link-text">Chromagrams</span></a></li><li class="nav-item" role="presentation"><a id="tab-cepstograms" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#cepstograms" data-scrolling="false" href="#cepstograms" aria-controls="cepstograms" aria-selected="false"><span class="nav-link-text">Cepstograms</span></a></li><li class="nav-item" role="presentation"><a id="tab-tempograms" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#tempograms" data-scrolling="false" href="#tempograms" aria-controls="tempograms" aria-selected="false"><span class="nav-link-text">Tempograms</span></a></li><li class="nav-item" role="presentation"><a id="tab-dendogram" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#dendogram" data-scrolling="false" href="#dendogram" aria-controls="dendogram" aria-selected="false"><span class="nav-link-text">Dendogram</span></a></li></ul></div></div>
 </nav>
 </header>
 <div class="page-layout-custom quarto-dashboard-content bslib-gap-spacing html-fill-container bslib-page-fill quarto-dashboard-pages">  
@@ -279,6 +279,55 @@ Hours
 Tempogram
 </div>
 <img src="figures/Tempogram_After_Hours.png" class="img-fluid" style="width:100.0%">
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div><div id="dendogram" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="columns" aria-labelledby="tab-dendogram">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="h4">
+Chroma
+
+Dendogram
+
+1
+</div>
+<img src="trilogy1_dendrogram.png" class="img-fluid" style="width:100.0%">
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="h4">
+Analysis
+</div>
+<p>The dendrogram for Trilogy 1 shows several clearly defined clusters, indicating strong variation between tracks. Songs group together based on similarities in their audio features, forming distinct sub-clusters that likely reflect differences in mood, structure, and production style.</p>
+<p>In contrast, the dendrogram for Trilogy 2 appears more compact and less clearly separated. Many tracks cluster together at lower distances, suggesting that they share more similar feature profiles. This indicates a more consistent and homogeneous sound across the album.</p>
+<p>Overall, the comparison suggests that Trilogy 1 is more diverse and experimental, while Trilogy 2 exhibits a more uniform and polished sound.</p>
+</div>
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<div class="h4">
+Dendogram
+
+2
+</div>
+<img src="trilogy2_dendrogram.png" class="img-fluid" style="width:100.0%">
 </div>
 <bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
     <template>Expand</template>
