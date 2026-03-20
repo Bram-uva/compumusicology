@@ -103,3 +103,11 @@ Overall, the visualization suggests that the track maintains a consistent tempo 
 
 ![](figures/Tempogram_After_Hours.png){width=100%}
 :::
+
+
+
+# Dendogram
+:::
+### Chroma Dendogram
+
+![](Dendogram_Chroma.png){width=100%}
