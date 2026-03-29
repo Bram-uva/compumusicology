@@ -15,13 +15,16 @@ theme: journal
 # Corpus
 
 ::: card
-### Corpus
+### Introduction
 
-In this project, I explore how The Weeknd’s music has evolved over time. As a corpus, I compare his first three mixtapes—later compiled as *Trilogy*—with his latest three albums: *After Hours*, *Dawn FM*, and *Hurry Up Tomorrow*.
+This project examines the musical evolution of The Weeknd by comparing two phases of his career that can both be understood as trilogies. His early work—House of Balloons, Thursday, and Echoes of Silence—was later compiled into the album Trilogy, forming a clearly defined body of work that established his initial sound and themes.   
 
-The Weeknd himself has suggested that these recent projects form a new trilogy. Shortly after the release of *Dawn FM* in 2022, he tweeted that listeners might be “experiencing a new trilogy.” In interviews, he has also described these records as part of a broader transformation of his artistic persona.
+In contrast, his more recent albums—After Hours, Dawn FM, and Hurry Up Tomorrow—have been described by the artist as forming a new, more conceptual trilogy. Rather than a formal compilation, this later sequence can be interpreted as a “spiritual trilogy,” centered on the transformation of his artistic persona. This parallel makes his discography a compelling case for examining stylistic development across two deliberately framed phases.   
 
-Because of these themes, the albums are often interpreted as a conceptual or spiritual trilogy. Comparing The Weeknd’s first trilogy with his most recent one therefore offers an interesting way to examine how his voice, themes, and emotional tone have evolved over time.
+To explore this, the project applies computational audio features—chroma (harmony), MFCC (timbre), novelty curves (structure), and tempograms (rhythm)—to identify measurable differences between these periods. In addition, three representative tracks are analysed in detail: “Wicked Games” and “Blinding Lights”. These are the most streamed tracks of either trilogy. Because of personal biases "After Hours" will also be analysed alongside these 2 other songs, In my opinion this is the most interesting piece of music he brought out on both trilogies  
+
+Research question:
+To what extent do computational audio features (chroma, MFCC, novelty curves, and tempograms) provide consistent evidence for a stylistic evolution in The Weeknd’s music between his early Trilogy and his later, conceptually defined trilogy?
 :::
 
 # Moods
@@ -128,19 +131,11 @@ Even though ceptograms are useful, they are still simplified representations. Th
 
 ::: card
 ### Analysis
-Novelty functions measure how much an audio signal changes over time and are often used to detect structural boundaries or transitions in music. They do this by tracking local changes in features like spectrum, energy, or phase. In that sense, they act as a computational way of spotting moments where something new happens in the music. However, it’s important to remember that these curves represent changes in the signal itself, not necessarily how a listener actually perceives musical structure.  
+Novelty functions measure how much an audio signal changes over time and are often used to detect structural boundaries or transitions in music. They highlight moments where something new happens, but it is important to note that they capture signal changes rather than how listeners actually perceive musical structure.   
 
-Looking at the three tracks, clear differences appear in how change is distributed over time. **Wicked Games** shows a fairly stable novelty pattern, with repeating clusters of peaks. This fits its loop-based structure, where small variations happen within an otherwise consistent harmonic and timbral framework. As a result, the novelty curve reflects ongoing small changes rather than major structural shifts.  
+Looking at the three tracks, clear differences appear in how change is distributed. **Wicked Games** shows a relatively stable novelty pattern with repeating clusters of peaks, reflecting its loop-based structure with small variations within a consistent framework. **Blinding Lights** has a more regular and predictable pattern, with evenly spaced peaks that mirror its steady rhythm and repetitive drum pattern, making the temporal structure easy to follow. **After Hours**, in contrast, shows more variation, including a dense cluster of larger peaks that likely corresponds to a moment of rapid change or buildup. This being around the 2-minute mark makes sense, because this is the moment the bass comes in for the first time.      
 
-**Blinding Lights** shows a much more regular pattern. The peaks are evenly spaced and have similar strength, which matches the track’s steady rhythm and repetitive drum pattern. Because of this consistency, it becomes easier to detect onsets and rhythmic subdivisions, making the overall temporal structure very clear.  
-
-**After Hours**, on the other hand, shows much more variation. There is a dense cluster of large peaks, indicating a period where the music changes rapidly. This likely corresponds to a major transition or build-up in the track. Compared to the other songs, where changes are more evenly spread out, this section stands out as a moment of intense activity, which can also make smaller changes harder to detect.
-
-How we interpret these curves depends a lot on how they are computed. For example, the size of the analysis window (kernel) has a big influence: smaller windows capture quick, local events like note onsets, while larger ones smooth things out and highlight bigger structural sections. This means that the same track can look quite different depending on the chosen time scale.  
-
-It’s also important to remember that novelty functions depend on the features they are built from. If they are based on chroma or MFCC features, they can reflect things like octave collapse, timbral overlap, or production artifacts instead of actual musical changes. This can result in peaks that don’t match what a listener would hear as a structural boundary.  
-
-Overall, the three tracks form a clear spectrum: from stable, loop-based variation in **Wicked Games**, to steady and rhythmically structured change in **Blinding Lights**, to more concentrated and large-scale change in **After Hours.** Novelty curves are useful for highlighting moments of change, but they always need to be interpreted carefully, keeping in mind both their technical limitations and the difference between signal analysis and musical perception.
+Overall, the three tracks form a spectrum, from stable, loop-based variation in **Wicked Games**, to steady, rhythmically structured change in **Blinding Lights**, to more concentrated and large-scale change in **After Hours**. 
 
 :::
 
@@ -157,17 +152,14 @@ Overall, the three tracks form a clear spectrum: from stable, loop-based variati
 
 ::: card
 ### Analysis   
-Tempograms represent tempo-related periodicities over time by analyzing the local regularity of events in an audio signal. Rather than operating directly on raw audio, they are typically derived from novelty curves, which encode the temporal distribution of onsets and transient changes. In this sense, the novelty curve functions as an event-density signal, while the tempogram captures the periodic structure of these events. A regular sequence of peaks in the novelty curve produces stable horizontal bands in the tempogram, whereas irregular or sparse activity results in weak or diffuse tempo representations.  
+Tempograms represent tempo-related periodicities over time by analyzing the regularity of events derived from a novelty curve. The novelty curve acts as an event-density signal, capturing the temporal distribution of onsets and transient changes, while the tempogram reveals how these events are periodically organized. Regular sequences of onsets produce stable horizontal bands, whereas irregular or sparse activity results in weaker or more diffuse representations.   
 
-Clear differences emerge across the three tracks in terms of rhythmic stability and temporal organization. **Wicked Games** shows a more intermittent and clustered tempogram profile. While a dominant pulse is present, it appears in bursts rather than as a continuous band. This reflects its loop-based structure, where rhythmic activity is grouped into repeating units with relatively sparse transitions between them. The resulting pattern suggests a stable tempo that is locally reinforced but not continuously articulated.  
+Clear differences emerge across the three tracks in terms of rhythmic stability and temporal organization. **Wicked Games** shows a present but intermittent pulse: its tempogram appears in clustered segments rather than as a continuous band. This reflects its loop-based structure, where rhythmic activity is grouped into repeating units with relatively sparse transitions, resulting in a tempo that is locally reinforced but not consistently sustained over time.   
 
-**Blinding Lights** exhibits the highest degree of rhythmic stability. Its tempogram shows strong, continuous horizontal bands, indicating a highly regular sequence of onsets. This reflects a tightly quantized rhythmic structure with a persistent pulse, likely driven by consistent percussive elements. The presence of multiple parallel bands indicates that the system captures both the primary beat level and its subdivisions, forming a clear hierarchical representation of tempo.  
- 
-**After ** displays the greatest variability. A dense cluster of horizontal bands appears within a limited time window, indicating a period of strong rhythmic activity and clearly defined periodicity. Outside of this region, the tempogram is relatively sparse, suggesting weaker or less consistent onset patterns. This contrast indicates that large-scale structural changes dominate the rhythmic profile, with tempo becoming more clearly defined only during sections of increased activity.  
+**Blinding Lights** exhibits the highest degree of rhythmic stability. Its tempogram contains strong, continuous horizontal bands, indicating a highly regular sequence of onsets and a persistent, clearly articulated pulse. The presence of multiple parallel bands suggests a hierarchical rhythmic structure, capturing both the primary beat and its subdivisions, which is characteristic of tightly quantized, percussively driven music.   
+**After Hours** shows the greatest variability. A dense cluster of horizontal bands appears within a limited time window, indicating a segment of strong rhythmic activity and clearly defined periodicity. Outside of this region, the tempogram becomes sparse and less structured, suggesting weaker or less consistent onset patterns. This contrast points to larger-scale structural changes in the track, where tempo clarity emerges only during specific sections.   
 
-The interpretation of these patterns depends strongly on the underlying novelty representation. Errors or ambiguities in onset detection directly affect the resulting tempogram, as irregular or noisy novelty curves lead to unstable tempo estimates. Additionally, multiple tempo bands may reflect different metrical levels rather than distinct tempos, introducing ambiguity in identifying the perceptually dominant pulse.  
-
-Overall, the three tracks illustrate a continuum from locally reinforced but intermittent periodicity (**Wicked Games**), to highly stable and continuously articulated rhythm (**Blinding Lights**), to temporally concentrated rhythmic activity (**After Hours**). Tempograms provide a structured view of temporal regularity, but their interpretability depends on the quality of the novelty signal and the distinction between computational periodicity and perceived musical tempo.
+Overall, the three tracks illustrate a continuum from locally reinforced but intermittent periodicity (**Wicked Games**), to highly stable and continuously articulated rhythm (**Blinding Lights**), to temporally concentrated rhythmic activity (**After Hours**). While tempograms provide a structured view of temporal regularity, their interpretation remains dependent on the quality of the novelty curve and on distinguishing between computational periodicities and perceptually relevant tempo levels.
 ::: 
 
 ## Row
@@ -176,7 +168,7 @@ Overall, the three tracks illustrate a continuum from locally reinforced but int
 ::: card
 
 
-![](clustering.png){width=100%}
+![](clustering2.png){width=100%}
 
 :::
 
@@ -185,14 +177,27 @@ Overall, the three tracks illustrate a continuum from locally reinforced but int
 ::: card
 ### Analysis
 
-The cluster heatmap groups tracks based on similarities in features such as energy, loudness, tempo, and valence. This allows us to compare tracks based on measurable characteristics rather than genre labels, although these features remain simplified representations of music.
+The clustering reveals both continuity and change in The Weeknd’s musical style. Some early and late tracks (e.g., **Wicked Games** and **After Hours**) are positioned close together, suggesting a persistent preference for darker, mid-tempo, low-valence soundscapes.   
 
-**Blinding Lights** clusters with tracks that have high energy and loudness, reflecting a strong, rhythm-driven production style. In contrast, **After Hours** and **Wicked Games** are positioned closer together, indicating more similar feature profiles with lower energy and a more atmospheric character.
+The most notable difference appears in the late era, where tracks such as **Blinding Lights** and **In Your Eyes** cluster strongly around high Energy, Loudness, and Danceability. This indicates a clear shift toward a more polished, synth-pop-oriented sound.   
 
-The heatmap also shows outliers, such as “Until We’re Skin & Bones,” which stands out due to high instrumentalness, suggesting a different type of arrangement.
+In contrast, the early era shows greater variation in Acousticness and Instrumentalness, pointing to a less uniform and more experimental production style.   
+  
+However, these results should be interpreted with caution, as Spotify audio features provide only a simplified representation of musical characteristics.
 
-Additionally, some features are clearly related: energy and loudness cluster together, while valence appears more independent.
+:::
 
-Overall, the clustering highlights general similarities in production and style, but should be interpreted carefully since these numerical features cannot fully capture musical expression.
+## Row
+# Conclusion
+::: card
 
+This project set out to examine how The Weeknd’s music has evolved over time by comparing his early Trilogy material with his later albums, using both corpus-level features and detailed analyses of representative tracks such as Wicked Games and Blinding Lights.      
+
+The results indicate a clear shift from a relatively uniform and loop-based musical style toward a more varied and structurally complex sound. Early work, as exemplified by Wicked Games, is characterized by high harmonic stability, repetitive structures, and limited variation in timbre and temporal organization. This is reflected in consistent chroma patterns, stable cepstral representations, and clustered novelty peaks that suggest incremental rather than large-scale change.      
+
+In contrast, later work such as Blinding Lights and After Hours demonstrates increased segmentation, clearer structural boundaries, and greater rhythmic regularity. Novelty curves reveal more evenly distributed and interpretable structural changes, while tempograms show stronger and more continuous periodicities, indicating a more defined rhythmic framework. At the same time, cepstral features point to a denser and more layered timbral profile, reflecting more complex production techniques.      
+
+At the corpus level, this evolution is further supported by broader distributions in features such as energy, tempo, and acousticness in the later trilogy, suggesting increased stylistic diversity. Clustering results reinforce this trend, showing that newer tracks are less tightly grouped and exhibit more variation in their feature profiles compared to earlier work.     
+
+Overall, the data suggests that The Weeknd’s musical evolution can be understood as a transition from introspective, sonically cohesive compositions toward more rhythmically driven, structurally explicit, and timbrally rich productions. While computational features cannot fully capture musical meaning, they provide consistent evidence of this shift, highlighting an expansion in both expressive range and production complexity over time.
 :::
