@@ -168,7 +168,7 @@ Overall, the three tracks illustrate a continuum from locally reinforced but int
 ::: card
 
 
-![](clustering2.png){width=100%}
+![](clustering2.png)
 
 :::
 
