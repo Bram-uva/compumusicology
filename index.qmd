@@ -167,7 +167,7 @@ Overall, the three tracks illustrate a continuum from locally reinforced but int
 ::: card
 
 
-![](clustering2.png)
+![](img/clustering_image.png)
 
 :::
 
@@ -181,6 +181,8 @@ The clustering reveals both continuity and change in The Weeknd’s musical styl
 The most notable difference appears in the late era, where tracks such as **Blinding Lights** and **In Your Eyes** cluster strongly around high Energy, Loudness, and Danceability. This indicates a clear shift toward a more polished, synth-pop-oriented sound.   
 
 In contrast, the early era shows greater variation in Acousticness and Instrumentalness, pointing to a less uniform and more experimental production style.   
+
+These observations suggest that The Weeknd’s musical evolution is not a complete stylistic break, but rather a gradual refinement of an existing aesthetic. While newer tracks introduce higher energy and more dance-oriented elements, they still retain core characteristics present in earlier work. As a result, the clustering reflects a balance between consistency and innovation, where familiar sonic traits persist even as production becomes more polished and commercially oriented.   
   
 However, these results should be interpreted with caution, as Spotify audio features provide only a simplified representation of musical characteristics.
 
@@ -195,6 +197,8 @@ However, these results should be interpreted with caution, as Spotify audio feat
 This project set out to examine how The Weeknd’s music has evolved over time by comparing his early *Trilogy* material with his later albums, using both corpus-level features and detailed analyses of representative tracks such as “Wicked Games,” “Blinding Lights,” and “After Hours.”   
 
 Overall, the results indicate that computational audio features provide consistent, though not complete, evidence for a stylistic evolution in The Weeknd’s music between his early and later trilogies. Across multiple levels of analysis, a clear shift emerges from relatively uniform, loop-based musical structures toward more varied, segmented, and structurally complex productions.   
+
+Importantly, this evolution does not represent a complete stylistic break, as similarities between early and later tracks persist, reflecting a continuity in The Weeknd’s core aesthetic.   
 
 Early work, as exemplified by “Wicked Games,” is characterized by high harmonic stability, repetitive structures, and limited variation in timbre and temporal organization. These qualities are reflected in stable chroma patterns, consistent cepstral representations, and clustered novelty peaks, suggesting gradual and incremental change over time.   
 
