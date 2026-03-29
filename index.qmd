@@ -72,6 +72,7 @@ Overall, Trilogy 1 appears more consistent and slightly more energetic, danceabl
 :::
 
 :::card
+### Analysis
 Chroma-based features (chromagrams) provide a mid-level representation of audio by mapping spectral energy onto twelve pitch classes. This involves substantial dimensionality reduction through octave collapse, where pitches separated by octaves are aggregated. Euclidean normalization emphasizes relative pitch content over dynamics. However, this transformation is inherently lossy: information about register, voicing, and the distinction between fundamentals and harmonics is suppressed, requiring cautious interpretation.  
 
 Across the three tracks, clear differences emerge in spectral density, harmonic stability, and chroma segmentation.
@@ -100,6 +101,7 @@ Overall, the three tracks form a continuum: from high repetition and stability (
 :::
 
 ::: card
+### Analysis
 The Mel-frequency cepstrum (MFCC), often shown as a ceptogram, is a way to represent audio by capturing the overall shape of the spectrum, which relates closely to timbre (or “sound color”). Unlike chromagrams, which focus on pitch and harmony, ceptograms focus more on how something sounds, for example the type of instrument or texture, using the perceptually based Mel scale.  
 
 Looking at the three tracks, clear differences appear in how stable or dense their timbre is. Wicked Games shows the most stable timbral pattern. Its ceptogram is very repetitive and changes little over time, which reflects the minimal arrangement built around consistent elements like electric guitar and vocals. This results in a very uniform sound throughout the track.  
@@ -154,6 +156,7 @@ Overall, the three tracks form a clear spectrum: from stable, loop-based variati
 :::
 
 ::: card
+### Analysis   
 Tempograms represent tempo-related periodicities over time by analyzing the local regularity of events in an audio signal. Rather than operating directly on raw audio, they are typically derived from novelty curves, which encode the temporal distribution of onsets and transient changes. In this sense, the novelty curve functions as an event-density signal, while the tempogram captures the periodic structure of these events. A regular sequence of peaks in the novelty curve produces stable horizontal bands in the tempogram, whereas irregular or sparse activity results in weak or diffuse tempo representations.  
 
 Clear differences emerge across the three tracks in terms of rhythmic stability and temporal organization. “Wicked Games” shows a more intermittent and clustered tempogram profile. While a dominant pulse is present, it appears in bursts rather than as a continuous band. This reflects its loop-based structure, where rhythmic activity is grouped into repeating units with relatively sparse transitions between them. The resulting pattern suggests a stable tempo that is locally reinforced but not continuously articulated.  
@@ -173,7 +176,7 @@ Overall, the three tracks illustrate a continuum from locally reinforced but int
 ::: card
 ### Chroma Dendogram 1
 
-![](trilogy1_dendrogram.png){width=100%}
+![](clustering.png){width=100%}
 
 :::
 
@@ -182,18 +185,14 @@ Overall, the three tracks illustrate a continuum from locally reinforced but int
 ::: card
 ### Analysis
 
-The dendrogram for Trilogy 1 shows several clearly defined clusters, indicating strong variation between tracks. Songs group together based on similarities in their audio features, forming distinct sub-clusters that likely reflect differences in mood, structure, and production style.
+The cluster heatmap groups tracks based on similarities in features such as energy, loudness, tempo, and valence. This allows us to compare tracks based on measurable characteristics rather than genre labels, although these features remain simplified representations of music.
 
-In contrast, the dendrogram for Trilogy 2 appears more compact and less clearly separated. Many tracks cluster together at lower distances, suggesting that they share more similar feature profiles. This indicates a more consistent and homogeneous sound across the album.
+“Blinding Lights” clusters with tracks that have high energy and loudness, reflecting a strong, rhythm-driven production style. In contrast, “After Hours” and “Wicked Games” are positioned closer together, indicating more similar feature profiles with lower energy and a more atmospheric character.
 
-Overall, the comparison suggests that Trilogy 1 is more diverse and experimental, while Trilogy 2 exhibits a more uniform and polished sound.
+The heatmap also shows outliers, such as “Until We’re Skin & Bones,” which stands out due to high instrumentalness, suggesting a different type of arrangement.
 
-:::
+Additionally, some features are clearly related: energy and loudness cluster together, while valence appears more independent.
 
-
-::: card
-### Dendogram 2
-
-![](trilogy2_dendrogram.png){width=100%}
+Overall, the clustering highlights general similarities in production and style, but should be interpreted carefully since these numerical features cannot fully capture musical expression.
 
 :::
