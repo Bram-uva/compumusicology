@@ -1,68 +1,48 @@
+# ============================================================
+# SSM met timbre features (MFCC)
+# ============================================================
+
 library(tidyverse)
 library(compmus)
 
-# ---- TRACK KIEZEN ----
-track_name <- "After Hours"
+# Kies 3 tracks
+tracks <- c("Blinding Lights", "Wicked Games", "After Hours")
 
-files <- c(
-  "Chromatogram The_Zone.csv",
-  "Chromatogram Wicked_Games.csv",
-  "Chromatogram Timeless.csv",
-  "Chromatogram Blinding_Lights.csv",
-  "Chromatogram After_Hours.csv",
-  "Chromatogram Is_There_Someone_Else.csv",
-  "Chromatogram D.D..csv"
-)
+mfcc_data <- chroma_raw |>  # als je MFCC CSV hebt, vervang dit
+  filter(track %in% tracks)
 
-names(files) <- c(
-  "The Zone",
-  "Wicked Games",
-  "Timeless",
-  "Blinding Lights",
-  "After Hours",
-  "Is There Someone Else",
-  "D.D."
-)
+# Als je MFCC CSVs hebt → beter:
+# mfcc_data <- imap_dfr(mfcc_files, ...)
 
-# ---- LOAD ----
-chroma_raw <- imap_dfr(
-  files,
-  ~ read_csv(.x, show_col_types = FALSE) |> mutate(track = .y)
-)
+compute_ssm <- function(df) {
+  df |>
+    compmus_wrangle_mfcc() |>
+    mutate(
+      mfcc = map(mfcc, compmus_normalise, "euclidean")
+    ) |>
+    compmus_self_similarity(
+      feature = mfcc,
+      method = "cosine"
+    ) |>
+    filter(!is.nan(d)) |>
+    ggplot(aes(
+      x = xstart + xduration / 2,
+      y = ystart + yduration / 2,
+      fill = d
+    )) +
+    geom_tile() +
+    coord_equal() +
+    theme_minimal() +
+    scale_fill_viridis_c() +
+    labs(
+      title = paste("SSM (Timbre) —", unique(df$track)),
+      x = "Time (s)",
+      y = "Time (s)",
+      fill = "Similarity"
+    )
+}
 
-# ---- PREPARE CHROMA ----
-track_data <- chroma_raw |>
-  filter(track == track_name) |>
-  compmus_wrangle_chroma() |>
-  mutate(pitches = map(pitches, compmus_normalise, "euclidean")) |>
-  filter(row_number() %% 10L == 0L)
-
-# ---- SSM ----
-ssm <- compmus_long_distance(
-  track_data,
-  track_data,
-  feature = pitches,
-  method = "cosine"
-)
-
-# ---- PLOT ----
-ssm_plot <- ssm |>
-  filter(!is.nan(d)) |>
-  ggplot(aes(
-    x = xstart + xduration / 2,
-    width = xduration,
-    y = ystart + yduration / 2,
-    height = yduration,
-    fill = d
-  )) +
-  geom_tile() +
-  coord_equal() +
-  theme_minimal() +
-  scale_fill_viridis_c(direction = -1) +
-  labs(
-    title = paste("Self-Similarity Matrix —", track_name),
-    x = "Time (s)",
-    y = "Time (s)"
-  )
-
-print(ssm_plot)
+# Plotten
+mfcc_data |>
+  group_split(track) |>
+  walk(\(d) print(compute_ssm(d)))
