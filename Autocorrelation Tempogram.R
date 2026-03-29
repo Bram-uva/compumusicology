@@ -1,6 +1,6 @@
 library(tidyverse)
 
-tempogram <- read_csv("C:/Users/brsch/OneDrive/Documenten/R Projecten/compumusicology/Autocorrelation_Tempogram_After_Hours.csv")
+tempogram <- read_csv("C:/Users/brsch/OneDrive/Documenten/R Projecten/compumusicology/Autocorrelation_Tempogram_Blinding_Lights.csv")
 
 tempogram |>
   pivot_longer(-TIME, names_to = "tempo", values_to = "value") |>
@@ -13,7 +13,7 @@ tempogram |>
   ) +
   scale_fill_viridis_c(guide = "none") +
   labs(
-    title = "Tempogram After Hours",
+    title = "Tempogram Blinding Lights",
     x = "Tijd (s)",
     y = "Tempo (BPM)"
   ) +

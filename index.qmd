@@ -27,7 +27,7 @@ Because of these themes, the albums are often interpreted as a conceptual or spi
 # Moods
 ::: card
 
-![](weeknd_plot2_feature_densities)
+![](weeknd_plot2_feature_densities.png)
 :::
 ::: card
 **Acousticness**  
@@ -66,9 +66,24 @@ Overall, Trilogy 1 appears more consistent and slightly more energetic, danceabl
 
 ![](figures/chroma_euclidean_Wicked_Games.png){width=100%}
 
-![](figures/chroma_euclidean_Is_There_Someone_Else.png){width=100%}
+![](figures/chroma_euclidean_Blinding_Lights.png){width=100%}
 
 ![](figures/chroma_euclidean_After_Hours.png){width=100%}
+:::
+
+:::card
+Chroma-based features (chromagrams) provide a mid-level representation of audio by mapping spectral energy onto twelve pitch classes. This involves substantial dimensionality reduction through octave collapse, where pitches separated by octaves are aggregated. Euclidean normalization emphasizes relative pitch content over dynamics. However, this transformation is inherently lossy: information about register, voicing, and the distinction between fundamentals and harmonics is suppressed, requiring cautious interpretation.  
+
+Across the three tracks, clear differences emerge in spectral density, harmonic stability, and chroma segmentation.
+
+**Wicked Games** represents the highest degree of harmonic homogeneity. The chromagram consists of near-identical repeating patterns dominated by B, A, G, and E, indicating a stable loop-based structure. This strong visual regularity suggests minimal harmonic variation over time. However, this consistency likely reflects structural repetition rather than nuanced harmonic development, and the chromagram remains insensitive to expressive or timbral changes.  
+
+**Blinding Lights** shows clearer chroma segmentation. Energy is concentrated in discrete vertical blocks, primarily around F, Bb, Eb, and C. This indicates a stable and repetitive chord progression with well-defined transitions. The sharpness of these segments is consistent with a cleaner spectral profile, likely associated with synthesized timbres. Compared to “Wicked Games,” this track exhibits more explicit chord changes, while still maintaining high harmonic stability.
+
+**After Hours** exhibits the highest spectral density. A persistent energy concentration in the C bin suggests a tonal center, but significant activity across G, F, and Eb complicates interpretation. This apparent complexity may reflect either genuine harmonic richness or spectral leakage from overtones. For example, energy in the G bin could indicate a dominant pitch, but may also arise from the third harmonic of C. As a result, chord inference becomes ambiguous, highlighting the limitations of chromagrams in dense spectral contexts.  
+
+Overall, the three tracks form a continuum: from high repetition and stability (**Wicked Games**), to clearly segmented harmonic structure (**Blinding Lights**), to high spectral density and interpretive ambiguity (**After Hours**). These results demonstrate that chromagrams are most reliable in contexts with clear harmonic segmentation and low spectral interference, but become increasingly ambiguous as spectral complexity increases.
+
 :::
 ## Row
 
@@ -77,23 +92,33 @@ Overall, Trilogy 1 appears more consistent and slightly more energetic, danceabl
 ::: card
 ### The Weeknd cepstogram
 
-![]("euclidean_ceptograms\Ceptogram_After_Hours_euclidean.png")
-![]("euclidean_ceptograms\Ceptogram_The_Zone_euclidean.png")
 
-![]("euclidean_ceptograms\Ceptogram_Is_There_Someone_Else_euclidean.png")
+![](euclidean_ceptograms/Ceptogram_Wicked_Games_euclidean.png)
 
+![](euclidean_ceptograms/Ceptogram_Blinding_Lights_euclidean.png)
+![](euclidean_ceptograms/Ceptogram_After_Hours_euclidean.png)
 :::
 
 ::: card
-### The Weeknd cepstogram
+The Mel-frequency cepstrum (MFCC), often shown as a ceptogram, is a way to represent audio by capturing the overall shape of the spectrum, which relates closely to timbre (or “sound color”). Unlike chromagrams, which focus on pitch and harmony, ceptograms focus more on how something sounds, for example the type of instrument or texture, using the perceptually based Mel scale.  
+
+Looking at the three tracks, clear differences appear in how stable or dense their timbre is. Wicked Games shows the most stable timbral pattern. Its ceptogram is very repetitive and changes little over time, which reflects the minimal arrangement built around consistent elements like electric guitar and vocals. This results in a very uniform sound throughout the track.  
+
+Blinding Lights shows more structure over time. Its ceptogram has clear vertical lines that line up with percussive hits, while the overall spectral shape stays relatively stable in between. This suggests a clean and controlled sound, where changes in timbre are organized and easy to follow, matching the steady, rhythmic feel of the track.  
+
+After Hours shows the most variation. The ceptogram has a lot of fluctuation across both lower and higher coefficients, indicating a dense mix of sounds. This reflects the layered production with synthesizers and processed vocals. Because so many elements are present at once, it becomes harder to separate individual sound sources, as the timbral information is spread out across the whole representation.  
+
+Even though ceptograms are useful, they are still simplified representations. They highlight timbre, but lose detailed harmonic information, and can sometimes reflect production choices rather than actual musical structure. Because of this, they should be seen as models of the audio signal, not as a direct representation of how we hear or interpret the music.  
 
 
 :::
-
-# Tempograms
+## Row
+# Novelty Curves
 
 ::: card
 ### After Hours Novelty Curve
+![](Novelty_Curve_Wicked_Games.png){width=100%}
+![](Novelty_Curve_Blinding_Lights.png){width=100%}
 
 ![](figures/Novelty_Curve_After_Hours.png){width=100%}
 
@@ -101,23 +126,48 @@ Overall, Trilogy 1 appears more consistent and slightly more energetic, danceabl
 
 ::: card
 ### Analysis
-The novelty curve visualizes how much the musical signal changes over time. Peaks in the curve represent moments where the audio features differ strongly from the previous segment, which often corresponds to rhythmic events or structural changes in the music.
+Novelty functions measure how much an audio signal changes over time and are often used to detect structural boundaries or transitions in music. They do this by tracking local changes in features like spectrum, energy, or phase. In that sense, they act as a computational way of spotting moments where something new happens in the music. However, it’s important to remember that these curves represent changes in the signal itself, not necessarily how a listener actually perceives musical structure.  
 
-In the novelty curve of After Hours, the number and intensity of peaks vary throughout the track. The first part of the song shows relatively fewer peaks, suggesting a more stable and less dense rhythmic structure. Around the middle section of the track, the novelty values increase significantly, indicating more frequent musical events and a higher level of rhythmic activity. This likely corresponds to a section where additional rhythmic or instrumental elements are introduced.
+Looking at the three tracks, clear differences appear in how change is distributed over time. “Wicked Games” shows a fairly stable novelty pattern, with repeating clusters of peaks. This fits its loop-based structure, where small variations happen within an otherwise consistent harmonic and timbral framework. As a result, the novelty curve reflects ongoing small changes rather than major structural shifts.  
 
-The tempogram provides insight into the tempo structure of the track by showing the strength of rhythmic periodicities at different tempo levels over time. In the tempogram of After Hours, a clear horizontal band can be observed, indicating a relatively stable tempo throughout the track. Several additional horizontal bands appear at regular intervals above and below the main tempo band. These bands represent tempo harmonics, which occur because rhythmic patterns can be perceived at multiple metrical levels.
+“Blinding Lights” shows a much more regular pattern. The peaks are evenly spaced and have similar strength, which matches the track’s steady rhythm and repetitive drum pattern. Because of this consistency, it becomes easier to detect onsets and rhythmic subdivisions, making the overall temporal structure very clear.  
 
-Overall, the visualization suggests that the track maintains a consistent tempo while the rhythmic density changes over time, which is reflected in the varying intensity of the novelty curve.
+“After Hours,” on the other hand, shows much more variation. There is a dense cluster of large peaks, indicating a period where the music changes rapidly. This likely corresponds to a major transition or build-up in the track. Compared to the other songs, where changes are more evenly spread out, this section stands out as a moment of intense activity, which can also make smaller changes harder to detect.
+
+How we interpret these curves depends a lot on how they are computed. For example, the size of the analysis window (kernel) has a big influence: smaller windows capture quick, local events like note onsets, while larger ones smooth things out and highlight bigger structural sections. This means that the same track can look quite different depending on the chosen time scale.  
+
+It’s also important to remember that novelty functions depend on the features they are built from. If they are based on chroma or MFCC features, they can reflect things like octave collapse, timbral overlap, or production artifacts instead of actual musical changes. This can result in peaks that don’t match what a listener would hear as a structural boundary.  
+
+Overall, the three tracks form a clear spectrum: from stable, loop-based variation in “Wicked Games,” to steady and rhythmically structured change in “Blinding Lights,” to more concentrated and large-scale change in “After Hours.” Novelty curves are useful for highlighting moments of change, but they always need to be interpreted carefully, keeping in mind both their technical limitations and the difference between signal analysis and musical perception.
 
 :::
 
+## Row
+# Tempograms
 ::: card 
 ### After Hours Tempogram
+![](Tempogram_Wicked_Games.png){width=100%}
+
+![](Tempogram_Blinding_Lights.png){width=100%}
 
 ![](figures/Tempogram_After_Hours.png){width=100%}
 :::
 
+::: card
+Tempograms represent tempo-related periodicities over time by analyzing the local regularity of events in an audio signal. Rather than operating directly on raw audio, they are typically derived from novelty curves, which encode the temporal distribution of onsets and transient changes. In this sense, the novelty curve functions as an event-density signal, while the tempogram captures the periodic structure of these events. A regular sequence of peaks in the novelty curve produces stable horizontal bands in the tempogram, whereas irregular or sparse activity results in weak or diffuse tempo representations.  
 
+Clear differences emerge across the three tracks in terms of rhythmic stability and temporal organization. “Wicked Games” shows a more intermittent and clustered tempogram profile. While a dominant pulse is present, it appears in bursts rather than as a continuous band. This reflects its loop-based structure, where rhythmic activity is grouped into repeating units with relatively sparse transitions between them. The resulting pattern suggests a stable tempo that is locally reinforced but not continuously articulated.  
+
+“Blinding Lights” exhibits the highest degree of rhythmic stability. Its tempogram shows strong, continuous horizontal bands, indicating a highly regular sequence of onsets. This reflects a tightly quantized rhythmic structure with a persistent pulse, likely driven by consistent percussive elements. The presence of multiple parallel bands indicates that the system captures both the primary beat level and its subdivisions, forming a clear hierarchical representation of tempo.  
+ 
+“After Hours” displays the greatest variability. A dense cluster of horizontal bands appears within a limited time window, indicating a period of strong rhythmic activity and clearly defined periodicity. Outside of this region, the tempogram is relatively sparse, suggesting weaker or less consistent onset patterns. This contrast indicates that large-scale structural changes dominate the rhythmic profile, with tempo becoming more clearly defined only during sections of increased activity.  
+
+The interpretation of these patterns depends strongly on the underlying novelty representation. Errors or ambiguities in onset detection directly affect the resulting tempogram, as irregular or noisy novelty curves lead to unstable tempo estimates. Additionally, multiple tempo bands may reflect different metrical levels rather than distinct tempos, introducing ambiguity in identifying the perceptually dominant pulse.  
+
+Overall, the three tracks illustrate a continuum from locally reinforced but intermittent periodicity (“Wicked Games”), to highly stable and continuously articulated rhythm (“Blinding Lights”), to temporally concentrated rhythmic activity (“After Hours”). Tempograms provide a structured view of temporal regularity, but their interpretability depends on the quality of the novelty signal and the distinction between computational periodicity and perceived musical tempo.
+::: 
+
+## Row
 
 # Dendogram
 ::: card
