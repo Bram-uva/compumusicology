@@ -91,7 +91,7 @@ Overall, the three tracks form a continuum: from high repetition and stability (
 # Cepstograms
 
 ::: card
-### The Weeknd cepstogram
+
 
 
 ![](euclidean_ceptograms/Ceptogram_Wicked_Games_euclidean.png)
@@ -118,7 +118,7 @@ Even though ceptograms are useful, they are still simplified representations. Th
 # Novelty Curves
 
 ::: card
-### After Hours Novelty Curve
+
 ![](Novelty_Curve_Wicked_Games.png){width=100%}
 ![](Novelty_Curve_Blinding_Lights.png){width=100%}
 
@@ -147,7 +147,7 @@ Overall, the three tracks form a clear spectrum: from stable, loop-based variati
 ## Row
 # Tempograms
 ::: card 
-### After Hours Tempogram
+
 ![](Tempogram_Wicked_Games.png){width=100%}
 
 ![](Tempogram_Blinding_Lights.png){width=100%}
@@ -174,7 +174,7 @@ Overall, the three tracks illustrate a continuum from locally reinforced but int
 
 # Dendogram
 ::: card
-### Chroma Dendogram 1
+
 
 ![](clustering.png){width=100%}
 
