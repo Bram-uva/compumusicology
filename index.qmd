@@ -77,13 +77,17 @@ Overall, Trilogy 1 appears more consistent and slightly more energetic, danceabl
 ::: card
 ### The Weeknd cepstogram
 
-![](amy_timbre_chebyshev.png)
+![]("euclidean_ceptograms\Ceptogram_After_Hours_euclidean.png")
+![]("euclidean_ceptograms\Ceptogram_The_Zone_euclidean.png")
+
+![]("euclidean_ceptograms\Ceptogram_Is_There_Someone_Else_euclidean.png")
+
 :::
 
 ::: card
 ### The Weeknd cepstogram
 
-![](greenday_timbre_chebyshev.png)
+
 :::
 
 # Tempograms

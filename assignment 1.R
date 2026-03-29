@@ -62,7 +62,7 @@ feature_labels <- c(
 
 # ---- color palette inspired by your site ----
 burgundy <- "#5C0011"   # donkerrood/navbar vibe
-magenta  <- "#0F3A4A"  # fel roze accent
+magenta  <- "#FFD400"  # fel roze accent
 bg_light <- "#F5F2F4"   # zachte lichte achtergrond
 ink      <- "#111111"
 
