@@ -23,8 +23,7 @@ In contrast, his more recent albums—After Hours, Dawn FM, and Hurry Up Tomorro
 
 To explore this, the project applies computational audio features—chroma (harmony), MFCC (timbre), novelty curves (structure), and tempograms (rhythm)—to identify measurable differences between these periods. In addition, three representative tracks are analysed in detail: “Wicked Games” and “Blinding Lights”. These are the most streamed tracks of their respective trilogies. Due to personal bias, “After Hours” is also included alongside these two tracks. In my view, this is the most interesting piece of music he has released across both trilogies.   
 
-Research question:
-To what extent do computational audio features (chroma, MFCC, novelty curves, and tempograms) provide consistent evidence for a stylistic evolution in The Weeknd’s music between his early Trilogy and his later, conceptually defined trilogy?
+To what extent do computational audio features reveal a stylistic evolution in The Weeknd’s music between his early Trilogy and his later conceptual trilogy?
 :::
 
 # Moods
