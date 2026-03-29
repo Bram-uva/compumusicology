@@ -26,9 +26,36 @@ Because of these themes, the albums are often interpreted as a conceptual or spi
 
 # Moods
 ::: card
-### Moods
 
-![](img/weeknd_plot1_mood_map_single.png)
+![](weeknd_plot2_feature_densities)
+:::
+::: card
+**Acousticness**  
+Trilogy 2 (yellow) starts with higher values, indicating more acoustic elements in some tracks, but it quickly declines. Trilogy 1 (red) is more centered around mid-values, suggesting a more consistent but less acoustic overall sound.
+
+**Danceability**  
+Both datasets are quite similar, but Trilogy 1 shows a slightly higher peak around 0.6–0.7. This suggests that its tracks may be a bit more danceable, while Trilogy 2 is more evenly spread.
+
+**Energy**  
+Trilogy 1 has a strong peak at medium-high energy levels, whereas Trilogy 2 is more widely distributed. This indicates that Trilogy 2 includes both calmer and more energetic tracks, showing greater variation.
+
+**Liveness**  
+Both distributions are very similar and concentrated at low values. This suggests that most tracks in both trilogies are studio recordings with little live performance influence.
+
+**Loudness**  
+The patterns are comparable, but Trilogy 1 has a sharper peak around -8 dB, indicating more consistency in loudness. Trilogy 2 is more spread out, suggesting slightly more variation in production levels.
+
+**Speechiness**  
+Both trilogies have low speechiness overall, as expected for music. However, Trilogy 1 shows a few higher-value outliers, which may indicate occasional spoken segments or intros.
+
+**Tempo**  
+Trilogy 2 peaks slightly lower (around 110 BPM), while Trilogy 1 peaks higher (around 120–130 BPM). Trilogy 1 also shows a small secondary peak at higher tempos, suggesting more diversity.
+
+**Valence**  
+Trilogy 1 generally has higher valence values, meaning it leans slightly more toward positive or upbeat moods. Trilogy 2 shows more lower values, indicating a darker or more melancholic tone.
+
+**Conclusion**  
+Overall, Trilogy 1 appears more consistent and slightly more energetic, danceable, and positive. In contrast, Trilogy 2 shows greater variation across several features and leans more toward a darker, more diverse sound profile.
 :::
 
 
@@ -36,31 +63,13 @@ Because of these themes, the albums are often interpreted as a conceptual or spi
 ## Row
 # Chromagrams
 ::: card
-### D.D. / Wicked Games / The Zone (Euclidean)
-
-![](figures/chroma_euclidean_D_D_.png){width=100%}
 
 ![](figures/chroma_euclidean_Wicked_Games.png){width=100%}
 
-![](figures/chroma_euclidean_The_Zone.png){width=100%}
-:::
-
-::: card
-### Blinding Lights / Is There Someone Else / Timeless (Euclidean)
-
-![](figures/chroma_euclidean_Blinding_Lights.png){width=100%}
-
 ![](figures/chroma_euclidean_Is_There_Someone_Else.png){width=100%}
-
-![](figures/chroma_euclidean_Timeless.png){width=100%}
-:::
-
-::: card 
-### After Hours (Euclidean)
 
 ![](figures/chroma_euclidean_After_Hours.png){width=100%}
 :::
-
 ## Row
 
 # Cepstograms

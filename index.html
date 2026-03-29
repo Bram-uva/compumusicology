@@ -99,14 +99,37 @@ Corpus
 </bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
 </div>
 </div><div id="moods" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="columns" aria-labelledby="tab-moods">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
 <div class="card html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-body html-fill-item html-fill-container">
-<div class="h4">
-Moods
+<img src="weeknd_plot2_feature_densities.png" class="img-fluid">
 </div>
-<img src="img/weeknd_plot1_mood_map_single.png" class="img-fluid">
+<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-body html-fill-item html-fill-container">
+<p><strong>Acousticness</strong><br>
+Trilogy 2 (yellow) starts with higher values, indicating more acoustic elements in some tracks, but it quickly declines. Trilogy 1 (red) is more centered around mid-values, suggesting a more consistent but less acoustic overall sound.</p>
+<p><strong>Danceability</strong><br>
+Both datasets are quite similar, but Trilogy 1 shows a slightly higher peak around 0.6–0.7. This suggests that its tracks may be a bit more danceable, while Trilogy 2 is more evenly spread.</p>
+<p><strong>Energy</strong><br>
+Trilogy 1 has a strong peak at medium-high energy levels, whereas Trilogy 2 is more widely distributed. This indicates that Trilogy 2 includes both calmer and more energetic tracks, showing greater variation.</p>
+<p><strong>Liveness</strong><br>
+Both distributions are very similar and concentrated at low values. This suggests that most tracks in both trilogies are studio recordings with little live performance influence.</p>
+<p><strong>Loudness</strong><br>
+The patterns are comparable, but Trilogy 1 has a sharper peak around -8 dB, indicating more consistency in loudness. Trilogy 2 is more spread out, suggesting slightly more variation in production levels.</p>
+<p><strong>Speechiness</strong><br>
+Both trilogies have low speechiness overall, as expected for music. However, Trilogy 1 shows a few higher-value outliers, which may indicate occasional spoken segments or intros.</p>
+<p><strong>Tempo</strong><br>
+Trilogy 2 peaks slightly lower (around 110 BPM), while Trilogy 1 peaks higher (around 120–130 BPM). Trilogy 1 also shows a small secondary peak at higher tempos, suggesting more diversity.</p>
+<p><strong>Valence</strong><br>
+Trilogy 1 generally has higher valence values, meaning it leans slightly more toward positive or upbeat moods. Trilogy 2 shows more lower values, indicating a darker or more melancholic tone.</p>
+<p><strong>Conclusion</strong><br>
+Overall, Trilogy 1 appears more consistent and slightly more energetic, danceable, and positive. In contrast, Trilogy 2 shows greater variation across several features and leans more toward a darker, more diverse sound profile.</p>
 </div>
 <bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
     <template>Expand</template>
@@ -116,77 +139,12 @@ Moods
 </bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
 </div>
 </div><div id="chromagrams" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="columns" aria-labelledby="tab-chromagrams">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr);
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
 grid-auto-rows: minmax(0, 1fr);">
 <div class="card html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
 <div class="card-body html-fill-item html-fill-container">
-<div class="h4">
-D.D.
-
-/
-
-Wicked
-
-Games
-
-/
-
-The
-
-Zone
-
-(Euclidean)
-</div>
-<img src="figures/chroma_euclidean_D_D_.png" class="img-fluid" style="width:100.0%">
 <img src="figures/chroma_euclidean_Wicked_Games.png" class="img-fluid" style="width:100.0%">
-<img src="figures/chroma_euclidean_The_Zone.png" class="img-fluid" style="width:100.0%">
-</div>
-<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
-    <template>Expand</template>
-    <span class="bslib-full-screen-enter badge rounded-pill">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
-    </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-body html-fill-item html-fill-container">
-<div class="h4">
-Blinding
-
-Lights
-
-/
-
-Is
-
-There
-
-Someone
-
-Else
-
-/
-
-Timeless
-
-(Euclidean)
-</div>
-<img src="figures/chroma_euclidean_Blinding_Lights.png" class="img-fluid" style="width:100.0%">
 <img src="figures/chroma_euclidean_Is_There_Someone_Else.png" class="img-fluid" style="width:100.0%">
-<img src="figures/chroma_euclidean_Timeless.png" class="img-fluid" style="width:100.0%">
-</div>
-<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
-    <template>Expand</template>
-    <span class="bslib-full-screen-enter badge rounded-pill">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
-    </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-body html-fill-item html-fill-container">
-<div class="h4">
-After
-
-Hours
-
-(Euclidean)
-</div>
 <img src="figures/chroma_euclidean_After_Hours.png" class="img-fluid" style="width:100.0%">
 </div>
 <bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
